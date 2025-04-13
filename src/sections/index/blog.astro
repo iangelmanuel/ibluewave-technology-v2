@@ -1,0 +1,88 @@
+---
+import LinkSecondary from "@components/utilities/link-secondary.astro"
+---
+
+<section
+  class="py-16 bg-blue-50"
+  id="blog"
+>
+  <article class="container max-w-screen-xl mx-auto">
+    <section class="flex flex-col items-center text-center mb-12">
+      <h2
+        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary"
+      >
+        Lo ultimo en nuestro blog
+      </h2>
+      <p class="mt-4 max-w-[700px] text-gray-600">
+        Descubre las últimas tendencias, consejos y sobre el mundo del buceo.
+        Desde destinos de buceo hasta técnicas avanzadas, nuestro blog es tu
+        fuente de información para todo lo relacionado con el buceo.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img
+          src="https://placehold.co/300x200"
+          alt="Top 10 Diving Spots in the Caribbean"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <p class="text-sm text-ibwt-secondary font-medium">May 15, 2023</p>
+          <h3 class="mt-2 text-xl font-bold text-ibwt-primary">
+            Top 10 Diving Spots in the Caribbean
+          </h3>
+          <p class="mt-2 text-gray-600">
+            Explore the most beautiful diving locations in the Caribbean Sea
+            with crystal clear waters.
+          </p>
+          <a
+            href="#"
+            class="mt-4 inline-flex items-center text-ibwt-primary hover:text-blue-500"
+          >
+            Leer más
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ml-1 h-4 w-4"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 text-center">
+      <LinkSecondary
+        href="/blog"
+        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-100"
+      >
+        Ver todos los articulos
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="ml-2 h-4 w-4"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </LinkSecondary>
+    </section>
+  </article>
+</section>

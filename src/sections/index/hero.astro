@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets"
+
+import HeroImage from "@images/hero.webp"
+import Link from "@components/utilities/link.astro"
+import LinkSecondary from "@components/utilities/link-secondary.astro"
+---
+
+<section class="relative">
+  <section
+    class="absolute inset-0 bg-gradient-to-r from-blue-950/90 to-blue-600/90 z-10"
+  >
+  </section>
+
+  <Image
+    src={HeroImage}
+    alt="Imagen de buceo"
+    width={1600}
+    height={800}
+    class="w-full h-full object-cover"
+  />
+
+  <section
+    class="container relative z-20 mx-auto flex items-center text-center h-[600px] text-white"
+  >
+    <div
+      class="max-w-screen-2xl mx-auto flex flex-col items-center justify-center"
+    >
+      <h1
+        class="text-5xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white"
+      >
+        Descubre el mundo submarino
+      </h1>
+
+      <p class="mt-4 max-w-[700px] mx-auto text-lg text-white/90">
+        Experiencia única de buceo y tecnología innovadora. Aprende a bucear con
+        nosotros y explora la belleza del océano.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <Link
+          href="/cursos-especiales"
+          className="bg-ibwt-secondary text-white px-6 py-3"
+        >
+          Explorar Cursos
+        </Link>
+
+        <LinkSecondary
+          href="#cursos-especiales"
+          className="px-6 py-3 hover:bg-white/10 text-white border-white"
+        >
+          Saber más
+        </LinkSecondary>
+      </div>
+    </div>
+  </section>
+</section>

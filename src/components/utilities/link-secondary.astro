@@ -1,0 +1,22 @@
+---
+interface Props {
+  href: string
+  target?: HTMLAnchorElement["target"]
+  rel?: HTMLAnchorElement["rel"]
+  className?: string
+}
+
+const { href, target, rel, className } = Astro.props
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class:list={[
+    "bg-transparent border rounded-md text-lg font-medium ",
+    className
+  ]}
+>
+  <slot />
+</a>

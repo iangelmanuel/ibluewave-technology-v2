@@ -1,16 +1,17 @@
 ---
-import Hero from "@components/sections/index/Hero.astro"
 import Layout from "@layouts/Layout.astro"
+
+import Blog from "@sections/index/blog.astro"
+import About from "@sections/index/about.astro"
+import Courses from "@sections/index/courses.astro"
+import Contact from "@sections/index/contact.astro"
+import Hero from "@sections/index/hero.astro"
 ---
 
 <Layout>
   <Hero />
-
-  <section class="bg-gradient-to-b from-black to-blue-950 border-t-2 xl:pt-60">
-    <div class="max-w-screen-2xl mx-auto h-screen flex">
-      <h2 class="text-white font-extrabold text-center text-9xl">
-        Contenido de inicio
-      </h2>
-    </div>
-  </section>
+  <Courses />
+  <Blog />
+  <About />
+  <Contact />
 </Layout>

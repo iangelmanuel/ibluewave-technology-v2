@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets"
+import AboutImage from "@images/photo.webp"
+
+const numbersData = [
+  { number: "10+", label: "Años de experiencia" },
+  { number: "5000+", label: "Buceadores certificados" },
+  { number: "20+", label: "Lugares de buceo" },
+  { number: "15+", label: "Instructores profesionales" }
+]
+---
+
+<section
+  class="py-16 bg-gradient-to-r from-blue-700 to-ibwt-primary text-white"
+  id="about"
+>
+  <article class="container max-w-screen-xl mx-auto">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2
+          class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-secondary"
+        >
+          Conoce iBluewave Technology
+        </h2>
+        <p class="mt-4 text-white/90">
+          Fundado en 2015, iBluewave Technology es un centro de buceo
+          especializado en la formación de buceadores y la venta de equipos de
+          buceo de alta calidad. Nos dedicamos a ofrecer una experiencia de
+          buceo excepcional, combinando la pasión por el océano con la
+          tecnología más avanzada.
+        </p>
+
+        <p class="mt-4 text-white/90">
+          Nuestro equipo de instructores altamente capacitados y apasionados por
+          el buceo está aquí para guiarte en cada paso del camino. Ya sea que
+          seas un principiante o un buceador experimentado, tenemos algo para
+          ti.
+        </p>
+
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          {
+            numbersData.map(({ label, number }) => (
+              <div class="flex flex-col items-center bg-white/10 p-4 rounded-lg">
+                <span class="text-3xl font-bold text-ibwt-secondary">
+                  {number}
+                </span>
+                <span class="text-sm mt-1">{label}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="relative">
+        <div
+          class="absolute -top-4 -left-4 w-24 h-24 bg-orange-500 rounded-lg opacity-50"
+        >
+        </div>
+        <div
+          class="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500 rounded-lg opacity-50"
+        >
+        </div>
+
+        <div class="relative z-10 rounded-lg overflow-hidden">
+          <Image
+            src={AboutImage}
+            alt="Imagen de boyas de buceo"
+            width={800}
+            height={600}
+            loading="lazy"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </article>
+</section>

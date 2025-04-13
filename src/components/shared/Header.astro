@@ -1,29 +1,33 @@
 ---
 import { Image } from "astro:assets"
-import Navbar from "./Navbar.astro"
+import Navbar from "@components/shared/navbar.astro"
+import Logo from "@images/logo.webp"
+import Link from "@components/utilities/link.astro"
 ---
 
-<header class="fixed w-full z-10">
+<header class="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
   <section
-    class="max-w-screen-xl mx-auto flex items-center justify-between py-3"
+    class="container flex h-16 items-center justify-between max-w-screen-2xl mx-auto"
   >
-    <div>
-      <a
-        href="/"
-        class="flex items-center justify-center transition-transform hover:scale-105 hover:cursor-pointer duration-300 delay-75"
-      >
-        <Image
-          src="/assets/images/logo.webp"
-          alt="iBLueWaveTech logo"
-          width={70}
-          height={70}
-          loading="eager"
-        />
+    <div class="flex items-center gap-2">
+      <Image
+        src={Logo}
+        alt="Logo de iBluewave Technology"
+        class="h-12 w-12 rounded-full object-cover"
+        width={48}
+        height={48}
+      />
 
-        <span class="text-2xl font-bold text-white ml-3">iBlueWaveTech</span>
-      </a>
+      <span class="text-xl font-extrabold text-ibwt-primary">iBluewave</span>
+      <span class="text-xl font-light text-ibwt-secondary">Technology</span>
     </div>
 
     <Navbar />
+
+    <Link
+      href="/cursos-especiales"
+      className="hidden md:inline-flex bg-ibwt-secondary  text-white px-4 py-2 rounded-md"
+      >Cursos especiales</Link
+    >
   </section>
 </header>

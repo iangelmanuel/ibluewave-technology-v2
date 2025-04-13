@@ -1,0 +1,72 @@
+---
+import LinkSecondary from "@components/utilities/link-secondary.astro"
+import Link from "@components/utilities/link.astro"
+---
+
+<section
+  class="py-16 max-w-screen-xl mx-auto"
+  id="cursos-especiales"
+>
+  <article class="container">
+    <section class="flex flex-col items-center text-center mb-12">
+      <h2
+        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary"
+      >
+        Nuestros cursos especiales
+      </h2>
+      <p class="mt-4 max-w-[700px] text-gray-600">
+        Para principiantes y expertos, ofrecemos una variedad de cursos de buceo
+        diseñados para todos los niveles. Desde la certificación básica hasta
+        técnicas avanzadas, tenemos algo para todos.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
+      >
+        <img
+          src="https://placehold.co/400x300"
+          alt="Beginner Diving"
+          class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-ibwt-primary">Beginner Diving</h3>
+          <p class="mt-2 text-gray-600">
+            Perfect for first-time divers. Learn the basics of diving in a safe
+            environment.
+          </p>
+          <Link
+            href="#"
+            className="bg-ibwt-secondary px-4 py-2 mt-4 text-white"
+            >Learn More</Link
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 text-center">
+      <LinkSecondary
+        href="/cursos-especiales"
+        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-50"
+      >
+        Ver todos los cursos
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="ml-2 h-4 w-4"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </LinkSecondary>
+    </section>
+  </article>
+</section>

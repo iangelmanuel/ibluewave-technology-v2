@@ -1,0 +1,29 @@
+---
+import ContactForm from "@components/index/contact-form.astro"
+import ContactInfoMap from "@components/index/contact-info-map.astro"
+---
+
+<section
+  class="py-16 mx-auto max-w-screen-2xl"
+  id="contact"
+>
+  <article class="container">
+    <section class="flex flex-col items-center text-center mb-12">
+      <h2
+        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary"
+      >
+        Contactanos
+      </h2>
+      <p class="mt-4 max-w-[700px] text-gray-600">
+        Si tienes alguna pregunta, comentario o simplemente deseas ponerte en
+        contacto con nosotros, no dudes en enviarnos un mensaje. Estamos aquí
+        para ayudarte y responder a todas tus inquietudes.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <ContactForm />
+      <ContactInfoMap />
+    </section>
+  </article>
+</section>
