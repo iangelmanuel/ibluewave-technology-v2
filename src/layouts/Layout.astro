@@ -3,19 +3,15 @@ import Seo from "@components/shared/Seo.astro"
 import Header from "@components/shared/Header.astro"
 import Footer from "@components/shared/Footer.astro"
 
-import type { Preload } from "@interfaces/preload"
-
-import "@/styles/global.css"
+import "@styles/global.css"
 
 interface Props {
   title: string
-  desc: string
-  preload?: Array<Preload>
-  canonical?: string
+  description: string
   image?: string
 }
 
-const { title, desc, preload, canonical, image } = Astro.props
+const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
@@ -23,9 +19,7 @@ const { title, desc, preload, canonical, image } = Astro.props
   <head>
     <Seo
       title={title}
-      desc={desc}
-      preload={preload}
-      canonical={canonical}
+      description={description}
       image={image}
     />
   </head>

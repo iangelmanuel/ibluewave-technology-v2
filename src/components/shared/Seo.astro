@@ -1,120 +1,127 @@
 ---
-import type { Preload } from "@interfaces/preload"
 import { siteInfo } from "@constant/site-info"
 
 interface Props {
   title: string
-  desc: string
-  preload?: Array<Preload> | undefined
-  canonical?: string | undefined
+  description: string
   image?: string | undefined
 }
 
-const { image: siteImage } = siteInfo
-const { title, desc, preload, canonical, image = siteImage } = Astro.props
+const { title: siteTitle, description: siteDesc, image: siteImage } = siteInfo
 
-const determineCanonicalURL = () => {
-  if (Astro.url.host.includes("localhost")) return "http://localhost:4321"
-  return canonical || `${Astro.site}${Astro.url.pathname}`
-}
-
-const canonicalURL = new URL(determineCanonicalURL(), Astro.site)
+const {
+  title = siteTitle,
+  description = siteDesc,
+  image = siteImage
+} = Astro.props
 ---
 
-<title>{title}</title>
-
 <meta charset="UTF-8" />
-<meta
-  name="description"
-  content={desc}
-/>
-
-<link
-  rel="preload"
-  as="font"
-  href="/fonts/eurostile.TTF"
-  type="font/ttf"
-  crossorigin
-/>
-
-<link
-  rel="preload"
-  as="font"
-  href="/fonts/Nunito-Regular.ttf"
-  type="font/ttf"
-  crossorigin
-/>
-
-{
-  preload?.map(({ href, as, type, rel = "preload", crossorigin }) => (
-    <link
-      {rel}
-      {href}
-      {as}
-      {type}
-      {crossorigin}
-    />
-  ))
-}
-
-<link
-  rel="canonical"
-  href={canonicalURL}
-/>
 <meta
   name="viewport"
   content="width=device-width"
 />
-<meta
-  name="theme-color"
-  content="#ffffff"
+<title>
+  {title}
+</title>
+
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="/favicon.svg"
 />
 
-<meta
-  name="keywords"
-  content="buceo, buceo en Colombia, buceo en Santa Marta, buceo en San Andres, buceo en Cartagena, buceo en Providencia, buceo en el Caribe, buceo en el mar caribe, buceo en el parque tayrona, buceo en el parque tayrona Colombia, fotografia submarina, fotografia submarina en Colombia, fotografia submarina en Santa Marta, fotografia submarina en San Andres"
+<link
+  rel="preload"
+  href={image}
+  as="image"
+  type="image/webp"
+  crossorigin="anonymous"
 />
 
-<meta
-  property="og:image"
-  content={new URL(image, Astro.site)}
+<!-- Preload de las fuentes para que no se vea el cambio de fuente al cargar la pagina -->
+<link
+  rel="preload"
+  href="/fonts/anisette-medium.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
 />
-<meta
-  property="og:title"
-  content={title}
+<link
+  rel="preload"
+  href="/fonts/anisette-light.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
 />
-<meta
-  property="og:description"
-  content={desc}
+<link
+  rel="preload"
+  href="/fonts/anisette-bold.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
 />
+<link
+  rel="preload"
+  href="/fonts/anisette-black.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+
+<!--  -->
+
+<meta
+  name="description"
+  content={description}
+/>
+
 <meta
   property="og:url"
-  content={Astro.url}
-/>
-<meta
-  property="og:site_name"
-  content="iBlue Wave Technology"
+  content="https://www.infolavelada.com"
 />
 <meta
   property="og:type"
   content="website"
 />
 <meta
+  property="og:title"
+  content="La Velada del Año V de Ibai Llanos"
+/>
+<meta
+  property="og:description"
+  content={description}
+/>
+<meta
+  property="og:image"
+  content={image}
+/>
+<meta
   property="og:locale"
-  content="en_CO"
+  content="es_ES"
+/>
+<meta
+  property="og:site_name"
+  content="La Velada del Año V"
 />
 
 <meta
-  name="robots"
-  content="index, follow"
+  name="twitter:card"
+  content="summary_large_image"
 />
 <meta
-  name="googlebot"
-  content="index, follow"
+  name="twitter:site"
+  content="@infoLaVelada"
 />
-
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="/favicon.svg"
+<meta
+  name="twitter:creator"
+  content="@ibaiLlanos"
+/>
+<meta
+  name="twitter:title"
+  content="La Velada del Año V de Ibai Llanos"
+/>
+<meta
+  name="twitter:description"
+  content={description}
 />
