@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets"
+
+import Link from "@components/utilities/link.astro"
+
 import { navigation } from "@constant/navigation"
 import { siteInfo } from "@constant/site-info"
 
@@ -7,6 +10,35 @@ import Logo from "@images/logo.webp"
 
 const { address, phone, email } = siteInfo
 ---
+
+<section class="py-16 bg-blue-950 text-white">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold">
+          ¿Estás listo para sumergirte en la aventura?
+        </h2>
+        <p class="mt-4 text-white/80">
+          Únete a nuestra comunidad de entusiastas del buceo y explora el mundo
+          submarino con confianza.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-end">
+        <Link
+          href="/cursos-especiales"
+          className="bg-ibwt-secondary text-white px-6 py-3"
+        >
+          Empezar hoy
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  <article
+    class="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm"
+  >
+  </article>
+</section>
 
 <footer class="bg-blue-950 text-white py-12">
   <section class="container mx-auto">
