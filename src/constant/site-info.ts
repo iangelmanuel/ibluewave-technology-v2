@@ -1,6 +1,6 @@
 export const siteInfo = {
-  title: "iBlueWaveTechnology",
+  title: "iBlue Wave Technology",
   description:
-    "iBlueWaveTechnology es una empresa dedicada al buceo y la fotografía, ofreciendo servicios de buceo y fotografía submarina. Donde su fundador, el Sr. Ricardo De La Torre Mejía, es un fotógrafo submarino profesional con más de 5 años de experiencia en el campo del buceo y la fotografía.",
+    "iBlue Wave Technology es un proyecto liderado por Ricardo De La Torre Mejía, un buzo certificado por NAUI con amplia experiencia en la enseñanza de cursos de buceo en Colombia. Principalmente opera en destinos icónicos como Santa Marta, Cartagena y San Andrés, ofreciendo una experiencia única para los amantes del mar. Además, Ricardo se especializa en fotografía marítima, capturando la belleza del mundo submarino. Su pasión por el océano y su dedicación a compartir sus conocimientos hacen de iBlue Wave Technology una referencia en el ámbito del buceo y la exploración marina.",
   image: "/src/assets/images/logo.png"
 }
