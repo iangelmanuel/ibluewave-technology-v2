@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+import Navbar from "./Navbar.astro"
+---
+
+<header class="fixed w-full z-10">
+  <section
+    class="max-w-screen-xl mx-auto flex items-center justify-between py-3"
+  >
+    <div>
+      <a
+        href="/"
+        class="flex items-center justify-center transition-transform hover:scale-105 hover:cursor-pointer duration-300 delay-75"
+      >
+        <Image
+          src="/assets/images/logo.webp"
+          alt="iBLueWaveTech logo"
+          width={70}
+          height={70}
+          loading="eager"
+        />
+
+        <span class="text-2xl font-bold text-white ml-3">iBlueWaveTech</span>
+      </a>
+    </div>
+
+    <Navbar />
+  </section>
+</header>

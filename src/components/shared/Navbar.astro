@@ -1,0 +1,46 @@
+---
+import Link from "@components/utilities/Link.astro"
+
+const navigation = [
+  { text: "Inicio", href: "/" },
+  { text: "Conocenos", href: "/sobre-nosotros" },
+  { text: "Escribenos", href: "/contacto" },
+  { text: "Nuestro blog", href: "/blog" },
+  { text: "Cursos especiales", href: "/cursos-especiales" }
+]
+
+const { pathname } = Astro.url
+---
+
+<nav>
+  <ul class="flex items-center gap-x-5">
+    {
+      navigation.map(({ text, href }) =>
+        href !== "/cursos-especiales" ? (
+          <li class="text-lg">
+            <a
+              href={href}
+              class="text-gray-200 hover:text-white"
+            >
+              {text}
+            </a>
+
+            {pathname === href && (
+              <div
+                transition:name="navbar-underline"
+                class="border-b-2 border-ibwt-primary"
+              />
+            )}
+          </li>
+        ) : (
+          <Link
+            href="cursos-especiales"
+            className="px-4 py-2 bg-ibwt-secondary font-bold text-white"
+          >
+            Cursos especiales
+          </Link>
+        )
+      )
+    }
+  </ul>
+</nav>

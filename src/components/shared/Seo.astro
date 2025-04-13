@@ -2,8 +2,8 @@
 import { siteInfo } from "@constant/site-info"
 
 interface Props {
-  title: string
-  description: string
+  title?: string
+  description?: string
   image?: string | undefined
 }
 
@@ -78,7 +78,7 @@ const {
 
 <meta
   property="og:url"
-  content="https://www.infolavelada.com"
+  content="https://www.ibluewavetechnology.com"
 />
 <meta
   property="og:type"
@@ -86,7 +86,7 @@ const {
 />
 <meta
   property="og:title"
-  content="La Velada del Año V de Ibai Llanos"
+  content={title}
 />
 <meta
   property="og:description"
@@ -98,28 +98,30 @@ const {
 />
 <meta
   property="og:locale"
-  content="es_ES"
+  content="es_CO"
 />
 <meta
   property="og:site_name"
-  content="La Velada del Año V"
+  content="iBluewave Technology"
 />
 
 <meta
   name="twitter:card"
   content="summary_large_image"
 />
+
+<!-- TODO: ask for the instrutor's twitter -->
 <meta
   name="twitter:site"
-  content="@infoLaVelada"
+  content="@ibluewavetechnology"
 />
 <meta
   name="twitter:creator"
-  content="@ibaiLlanos"
+  content="@ricardodelatorre"
 />
 <meta
   name="twitter:title"
-  content="La Velada del Año V de Ibai Llanos"
+  content={title}
 />
 <meta
   name="twitter:description"

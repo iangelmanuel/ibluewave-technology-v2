@@ -10,9 +10,11 @@
       "@components/*": ["./src/components/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@styles/*": ["./src/styles/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@lib/*": ["./src/lib/*"],
       "@constant/*": ["./src/constant/*"],
       "@images/*": ["./src/assets/images/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
