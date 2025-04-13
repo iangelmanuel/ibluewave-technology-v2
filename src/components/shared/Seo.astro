@@ -1,0 +1,120 @@
+---
+import type { Preload } from "@interfaces/preload"
+import { siteInfo } from "@constant/site-info"
+
+interface Props {
+  title: string
+  desc: string
+  preload?: Array<Preload> | undefined
+  canonical?: string | undefined
+  image?: string | undefined
+}
+
+const { image: siteImage } = siteInfo
+const { title, desc, preload, canonical, image = siteImage } = Astro.props
+
+const determineCanonicalURL = () => {
+  if (Astro.url.host.includes("localhost")) return "http://localhost:4321"
+  return canonical || `${Astro.site}${Astro.url.pathname}`
+}
+
+const canonicalURL = new URL(determineCanonicalURL(), Astro.site)
+---
+
+<title>{title}</title>
+
+<meta charset="UTF-8" />
+<meta
+  name="description"
+  content={desc}
+/>
+
+<link
+  rel="preload"
+  as="font"
+  href="/fonts/eurostile.TTF"
+  type="font/ttf"
+  crossorigin
+/>
+
+<link
+  rel="preload"
+  as="font"
+  href="/fonts/Nunito-Regular.ttf"
+  type="font/ttf"
+  crossorigin
+/>
+
+{
+  preload?.map(({ href, as, type, rel = "preload", crossorigin }) => (
+    <link
+      {rel}
+      {href}
+      {as}
+      {type}
+      {crossorigin}
+    />
+  ))
+}
+
+<link
+  rel="canonical"
+  href={canonicalURL}
+/>
+<meta
+  name="viewport"
+  content="width=device-width"
+/>
+<meta
+  name="theme-color"
+  content="#ffffff"
+/>
+
+<meta
+  name="keywords"
+  content="buceo, buceo en Colombia, buceo en Santa Marta, buceo en San Andres, buceo en Cartagena, buceo en Providencia, buceo en el Caribe, buceo en el mar caribe, buceo en el parque tayrona, buceo en el parque tayrona Colombia, fotografia submarina, fotografia submarina en Colombia, fotografia submarina en Santa Marta, fotografia submarina en San Andres"
+/>
+
+<meta
+  property="og:image"
+  content={new URL(image, Astro.site)}
+/>
+<meta
+  property="og:title"
+  content={title}
+/>
+<meta
+  property="og:description"
+  content={desc}
+/>
+<meta
+  property="og:url"
+  content={Astro.url}
+/>
+<meta
+  property="og:site_name"
+  content="iBlue Wave Technology"
+/>
+<meta
+  property="og:type"
+  content="website"
+/>
+<meta
+  property="og:locale"
+  content="en_CO"
+/>
+
+<meta
+  name="robots"
+  content="index, follow"
+/>
+<meta
+  name="googlebot"
+  content="index, follow"
+/>
+
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="/favicon.svg"
+/>
