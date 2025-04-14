@@ -12,11 +12,11 @@ const marqueeImages = [
 
 const ImageCard = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <div className="relative w-60 h-40 overflow-hidden transition-all transform hover:scale-105 hover:cursor-pointer">
+    <div className="relative h-40 w-60 transform overflow-hidden transition-all hover:scale-105 hover:cursor-pointer">
       <img
         src={src}
         alt={alt}
-        className="object-cover w-full h-full rounded-md shadow-lg transition-transform duration-300"
+        className="h-full w-full rounded-md object-cover shadow-lg transition-transform duration-300"
       />
     </div>
   )
@@ -24,7 +24,7 @@ const ImageCard = ({ src, alt }: { src: string; alt: string }) => {
 
 export function MarqueeDemoVertical() {
   return (
-    <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden slide-in-right">
+    <div className="slide-in-right relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
       <Marquee
         pauseOnHover
         vertical
