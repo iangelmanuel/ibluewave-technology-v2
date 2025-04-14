@@ -1,4 +1,4 @@
-import { Marquee } from "./marquee"
+import { Marquee } from "./Marquee"
 
 const marqueeImages = [
   { src: "/assets/images/photo.webp", alt: "Photo 1" },
