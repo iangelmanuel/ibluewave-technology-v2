@@ -4,48 +4,48 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
 ---
 
 <section class="py-16">
-  <article class="container mx-auto scroll-zone">
-    <section class="flex flex-col items-center text-center mb-12">
+  <article class="scroll-zone container mx-auto">
+    <section class="mb-12 flex flex-col items-center text-center">
       <h2
-        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary scroll-float-in"
+        class="text-ibwt-primary scroll-float-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
       >
         Nuestros cursos especiales
       </h2>
-      <p class="mt-4 max-w-[700px] text-gray-600 scroll-fade-in-up">
+      <p class="scroll-fade-in-up mt-4 max-w-[700px] text-gray-600">
         Para principiantes y expertos, ofrecemos una variedad de cursos de buceo
         diseñados para todos los niveles. Desde la certificación básica hasta
         técnicas avanzadas, tenemos algo para todos.
       </p>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="grid grid-cols-1 gap-8 md:grid-cols-3">
       <div
-        class="group relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl scroll-fade-in-up"
+        class="group scroll-fade-in-up relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
       >
         <img
           src="https://placehold.co/400x300"
           alt="Beginner Diving"
-          class="w-full h-48 object-cover transition-transform group-hover:scale-105 image-zoom-out"
+          class="image-zoom-out h-48 w-full object-cover transition-transform group-hover:scale-105"
         />
         <div class="p-6">
-          <h3 class="text-xl font-bold text-ibwt-primary">Beginner Diving</h3>
+          <h3 class="text-ibwt-primary text-xl font-bold">Beginner Diving</h3>
           <p class="mt-2 text-gray-600">
             Perfect for first-time divers. Learn the basics of diving in a safe
             environment.
           </p>
           <Link
             href="#"
-            className="bg-ibwt-secondary px-4 py-2 mt-4 text-white"
+            className="bg-ibwt-secondary mt-4 px-4 py-2 text-white"
             >Learn More</Link
           >
         </div>
       </div>
     </section>
 
-    <section class="mt-12 text-center scroll-zone">
+    <section class="scroll-zone mt-12 text-center">
       <LinkSecondary
         href="/cursos-especiales"
-        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-50 slide-in-left"
+        className="border-ibwt-primary text-ibwt-primary slide-in-left inline-flex items-center px-4 py-2 hover:bg-blue-50"
       >
         Ver todos los cursos
         <!-- TODO: Cambiar svg por Astro Icon -->

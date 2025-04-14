@@ -6,7 +6,7 @@ import Link from "@components/utilities/link.astro"
 ---
 
 <header class="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
-  <section class="container flex h-16 items-center justify-between mx-auto">
+  <section class="container mx-auto flex h-16 items-center justify-between">
     <div class="flex items-center gap-2">
       <Image
         src={Logo}
@@ -16,15 +16,15 @@ import Link from "@components/utilities/link.astro"
         height={48}
       />
 
-      <span class="text-xl font-extrabold text-ibwt-primary">iBluewave</span>
-      <span class="text-xl font-light text-ibwt-secondary">Technology</span>
+      <span class="text-ibwt-primary text-xl font-extrabold">iBluewave</span>
+      <span class="text-ibwt-secondary text-xl font-light">Technology</span>
     </div>
 
     <Navbar />
 
     <Link
       href="/cursos-especiales"
-      className="hidden md:inline-flex bg-ibwt-secondary  text-white px-4 py-2 rounded-md"
+      className="bg-ibwt-secondary hidden rounded-md px-4 py-2 text-white md:inline-flex"
       >Cursos especiales</Link
     >
   </section>

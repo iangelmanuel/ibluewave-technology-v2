@@ -4,21 +4,21 @@ import ContactInfoMap from "@components/index/contact-info-map.astro"
 ---
 
 <section class="py-16">
-  <article class="container mx-auto scroll-zone">
-    <section class="flex flex-col items-center text-center mb-12">
+  <article class="scroll-zone container mx-auto">
+    <section class="mb-12 flex flex-col items-center text-center">
       <h2
-        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary scroll-float-in"
+        class="text-ibwt-primary scroll-float-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
       >
         Contactanos
       </h2>
-      <p class="mt-4 max-w-[700px] text-gray-600 scroll-fade-in-up">
+      <p class="scroll-fade-in-up mt-4 max-w-[700px] text-gray-600">
         Si tienes alguna pregunta, comentario o simplemente deseas ponerte en
         contacto con nosotros, no dudes en enviarnos un mensaje. Estamos aquí
         para ayudarte y responder a todas tus inquietudes.
       </p>
     </section>
 
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section class="grid grid-cols-1 gap-12 lg:grid-cols-2">
       <ContactForm />
       <ContactInfoMap />
     </section>

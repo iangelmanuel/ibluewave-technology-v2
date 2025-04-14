@@ -3,17 +3,17 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
 ---
 
 <section
-  class="py-16 bg-blue-50"
+  class="bg-blue-50 py-16"
   id="blog"
 >
-  <article class="container mx-auto scroll-zone">
-    <section class="flex flex-col items-center text-center mb-12">
+  <article class="scroll-zone container mx-auto">
+    <section class="mb-12 flex flex-col items-center text-center">
       <h2
-        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary scroll-float-in"
+        class="text-ibwt-primary scroll-float-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
       >
         Lo ultimo en nuestro blog
       </h2>
-      <p class="mt-4 max-w-[700px] text-gray-600 scroll-fade-in-up">
+      <p class="scroll-fade-in-up mt-4 max-w-[700px] text-gray-600">
         Descubre las últimas tendencias, consejos y sobre el mundo del buceo.
         Desde destinos de buceo hasta técnicas avanzadas, nuestro blog es tu
         fuente de información para todo lo relacionado con el buceo.
@@ -21,17 +21,17 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
     </section>
 
     <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-fade-in-up"
+      class="scroll-fade-in-up grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
     >
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <div class="overflow-hidden rounded-lg bg-white shadow-md">
         <img
           src="https://placehold.co/300x200"
           alt="Top 10 Diving Spots in the Caribbean"
-          class="w-full h-48 object-cover image-zoom-out"
+          class="image-zoom-out h-48 w-full object-cover"
         />
         <div class="p-6">
-          <p class="text-sm text-ibwt-secondary font-medium">May 15, 2023</p>
-          <h3 class="mt-2 text-xl font-bold text-ibwt-primary">
+          <p class="text-ibwt-secondary text-sm font-medium">May 15, 2023</p>
+          <h3 class="text-ibwt-primary mt-2 text-xl font-bold">
             Top 10 Diving Spots in the Caribbean
           </h3>
           <p class="mt-2 text-gray-600">
@@ -40,7 +40,7 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
           </p>
           <a
             href="#"
-            class="mt-4 inline-flex items-center text-ibwt-primary hover:text-blue-500"
+            class="text-ibwt-primary mt-4 inline-flex items-center hover:text-blue-500"
           >
             Leer más
             <!-- TODO: Cambiar svg por AstroIcon -->
@@ -64,10 +64,10 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
       </div>
     </section>
 
-    <section class="mt-12 text-center scroll-zone">
+    <section class="scroll-zone mt-12 text-center">
       <LinkSecondary
         href="/blog"
-        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-100 slide-in-right"
+        className="border-ibwt-primary text-ibwt-primary slide-in-right inline-flex items-center px-4 py-2 hover:bg-blue-100"
       >
         <!-- TODO: Cambiar svg por AstroIcon -->
         Ver todos los articulos

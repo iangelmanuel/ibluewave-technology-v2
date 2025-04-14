@@ -13,41 +13,41 @@ import HeroImage from "@images/hero-without-bg.webp"
 <section class="relative bg-gradient-to-t from-blue-950 to-blue-700">
   <Noise />
   <Bubble />
-  <article class="bg-gradient-to-r h-screen">
+  <article class="h-screen bg-gradient-to-r">
     <Image
       src={HeroImage}
       alt="Imagen de buceo"
       width={1600}
       height={800}
-      class="w-full h-full object-cover brightness-75 z-30 absolute"
+      class="absolute z-30 h-full w-full object-cover brightness-75"
     />
   </article>
 
   <article
-    class="container absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 z-40 mx-auto flex flex-col justify-center text-center h-[600px] text-white"
+    class="absolute top-1/2 left-1/2 z-40 container mx-auto flex h-[600px] -translate-x-1/2 -translate-y-1/2 flex-col justify-center text-center text-white"
   >
     <section
-      class="max-w-screen-2xl mx-auto flex flex-col items-center justify-center"
+      class="mx-auto flex max-w-screen-2xl flex-col items-center justify-center"
     >
       <h1
-        class="text-5xl font-bold tracking-tighter sm:text-5xl md:text-8xl text-ibwt-secondary hero-title"
+        class="text-ibwt-secondary hero-title text-5xl font-bold tracking-tighter sm:text-5xl md:text-8xl"
       >
         Descubre el mundo submarino
       </h1>
 
       <p
-        class="mt-4 max-w-[700px] mx-auto text-lg text-white/90 hero-paragraph"
+        class="hero-paragraph mx-auto mt-4 max-w-[700px] text-lg text-white/90"
       >
         Experiencia única de buceo y tecnología innovadora. Aprende a bucear con
         nosotros y explora la belleza del océano.
       </p>
     </section>
 
-    <section class="mt-8 flex justify-center items-center sm:flex-row gap-4">
+    <section class="mt-8 flex items-center justify-center gap-4 sm:flex-row">
       <div class="hero-btn-primary">
         <Link
           href="/cursos-especiales"
-          className="bg-ibwt-secondary text-white px-6 py-3"
+          className="bg-ibwt-secondary px-6 py-3 text-white"
         >
           Explorar Cursos
         </Link>
@@ -56,7 +56,7 @@ import HeroImage from "@images/hero-without-bg.webp"
       <div class="hero-btn-secondary">
         <LinkSecondary
           href="#sobre-nosotros"
-          className="px-6 py-3 hover:bg-white/10 text-white border-white"
+          className="border-white px-6 py-3 text-white hover:bg-white/10"
         >
           Saber más
         </LinkSecondary>

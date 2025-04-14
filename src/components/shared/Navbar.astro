@@ -4,13 +4,13 @@ import { navigation } from "@constant/navigation"
 const { pathname } = Astro.url
 ---
 
-<nav class="hidden md:flex gap-6">
+<nav class="hidden gap-6 md:flex">
   {
     navigation.map(({ text, href }) => (
       <div>
         <a
           href={href}
-          class="text-sm font-medium hover:text-blue-600 transition-colors"
+          class="text-sm font-medium transition-colors hover:text-blue-600"
         >
           {text}
         </a>
@@ -18,7 +18,7 @@ const { pathname } = Astro.url
         {pathname === href && (
           <div
             transition:name="navigation"
-            class="h-1 bg-blue-600 rounded-full mt-2 w-full"
+            class="mt-2 h-1 w-full rounded-full bg-blue-600"
           />
         )}
       </div>

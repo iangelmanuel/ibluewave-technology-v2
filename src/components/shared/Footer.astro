@@ -19,9 +19,9 @@ const infoContactIcons = [
 ]
 ---
 
-<section class="pt-16 bg-blue-950 text-white">
+<section class="bg-blue-950 pt-16 text-white">
   <div class="container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div>
         <h2 class="text-3xl font-bold">
           ¿Estás listo para sumergirte en la aventura?
@@ -31,10 +31,10 @@ const infoContactIcons = [
           submarino con confianza.
         </p>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 justify-end">
+      <div class="flex flex-col justify-end gap-4 sm:flex-row">
         <Link
           href="/cursos-especiales"
-          className="bg-ibwt-secondary text-white px-6 py-3"
+          className="bg-ibwt-secondary px-6 py-3 text-white"
         >
           Empezar hoy
         </Link>
@@ -43,16 +43,16 @@ const infoContactIcons = [
   </div>
 
   <article
-    class="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm"
+    class="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50"
   >
   </article>
 </section>
 
-<footer class="bg-blue-950 text-white py-12">
+<footer class="bg-blue-950 py-12 text-white">
   <section class="container mx-auto">
-    <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <article class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
       <section>
-        <div class="flex items-center gap-2 mb-6">
+        <div class="mb-6 flex items-center gap-2">
           <Image
             src={Logo}
             alt="iBluewave Technology Logo"
@@ -60,7 +60,7 @@ const infoContactIcons = [
             height={50}
           />
           <span class="text-xl font-extrabold text-white">iBluewave</span>
-          <span class="text-xl font-light text-ibwt-secondary">Technology</span>
+          <span class="text-ibwt-secondary text-xl font-light">Technology</span>
         </div>
 
         <p class="text-white/70">
@@ -76,7 +76,7 @@ const infoContactIcons = [
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-white/70 hover:text-ibwt-secondary"
+                class="hover:text-ibwt-secondary text-white/70"
               >
                 <Icon
                   name={name}
@@ -89,14 +89,14 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="text-lg font-bold mb-6">Redireccion de Navegación</h3>
+        <h3 class="mb-6 text-lg font-bold">Redireccion de Navegación</h3>
         <ul class="space-y-3">
           {
             navigation.map(({ text, href }) => (
               <li>
                 <a
                   href={href}
-                  class="text-white/70 hover:text-ibwt-secondary"
+                  class="hover:text-ibwt-secondary text-white/70"
                 >
                   {text}
                 </a>
@@ -107,40 +107,40 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="text-lg font-bold mb-6">Cursos especiales</h3>
+        <h3 class="mb-6 text-lg font-bold">Cursos especiales</h3>
         <ul class="space-y-3">
           <li>
             <a
               href="#"
-              class="text-white/70 hover:text-ibwt-secondary"
+              class="hover:text-ibwt-secondary text-white/70"
               >Beginner Diving</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-white/70 hover:text-ibwt-secondary"
+              class="hover:text-ibwt-secondary text-white/70"
               >Advanced Techniques</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-white/70 hover:text-ibwt-secondary"
+              class="hover:text-ibwt-secondary text-white/70"
               >Professional Certification</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-white/70 hover:text-ibwt-secondary"
+              class="hover:text-ibwt-secondary text-white/70"
               >Underwater Photography</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-white/70 hover:text-ibwt-secondary"
+              class="hover:text-ibwt-secondary text-white/70"
               >Night Diving</a
             >
           </li>
@@ -148,19 +148,19 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="text-lg font-bold mb-6">Información del contacto</h3>
+        <h3 class="mb-6 text-lg font-bold">Información del contacto</h3>
         <ul class="space-y-3">
           {
             infoContactIcons.map(({ name, data }) => (
               <li class="flex items-start">
                 <Icon
                   name={name}
-                  class="h-5 w-5 text-ibwt-secondary mt-1 mr-2"
+                  class="text-ibwt-secondary mt-1 mr-2 h-5 w-5"
                 />
                 {name === "basic-icons/email" ? (
                   <a
                     href={`mailto:${data}`}
-                    class="text-white/70 hover:text-ibwt-secondary hover:underline"
+                    class="hover:text-ibwt-secondary text-white/70 hover:underline"
                   >
                     {data}
                   </a>
@@ -175,7 +175,7 @@ const infoContactIcons = [
     </article>
 
     <article
-      class="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm"
+      class="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50"
     >
       <p id="copyright"></p>
     </article>
