@@ -12,18 +12,18 @@ const numbersData = [
 ---
 
 <section
+  id="sobre-nosotros"
   class="py-16 bg-gradient-to-r from-blue-700 to-ibwt-primary text-white"
-  id="about"
 >
-  <article class="container max-w-screen-xl mx-auto">
+  <article class="container mx-auto scroll-zone">
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
         <h2
-          class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-secondary"
+          class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-secondary slide-in-left"
         >
           Conoce iBluewave Technology
         </h2>
-        <p class="mt-4 text-white/90">
+        <p class="mt-4 text-white/90 scroll-fade-in-up">
           Fundado en 2015, iBluewave Technology es un centro de buceo
           especializado en la formación de buceadores y la venta de equipos de
           buceo de alta calidad. Nos dedicamos a ofrecer una experiencia de
@@ -31,17 +31,17 @@ const numbersData = [
           tecnología más avanzada.
         </p>
 
-        <p class="mt-4 text-white/90">
+        <p class="mt-4 text-white/90 scroll-fade-in-up">
           Nuestro equipo de instructores altamente capacitados y apasionados por
           el buceo está aquí para guiarte en cada paso del camino. Ya sea que
           seas un principiante o un buceador experimentado, tenemos algo para
           ti.
         </p>
 
-        <div class="mt-8 grid grid-cols-2 gap-4">
+        <div class="mt-8 grid grid-cols-2 gap-4 scroll-zone">
           {
             numbersData.map(({ label, number }) => (
-              <div class="flex flex-col items-center bg-white/10 p-4 rounded-lg">
+              <div class="flex flex-col items-center bg-white/10 p-4 rounded-lg scale-up">
                 <span class="text-3xl font-bold text-ibwt-secondary">
                   {number}
                 </span>
@@ -62,14 +62,14 @@ const numbersData = [
         >
         </div>
 
-        <div class="relative z-10 rounded-lg overflow-hidden">
+        <div class="relative z-10 rounded-lg overflow-hidden scroll-zone">
           <Image
             src={AboutImage}
             alt="Imagen de boyas de buceo"
             width={800}
             height={600}
             loading="lazy"
-            class="w-full h-auto object-cover"
+            class="w-full h-auto object-cover image-zoom-out"
           />
         </div>
       </div>

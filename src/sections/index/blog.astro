@@ -6,26 +6,28 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
   class="py-16 bg-blue-50"
   id="blog"
 >
-  <article class="container max-w-screen-xl mx-auto">
+  <article class="container mx-auto scroll-zone">
     <section class="flex flex-col items-center text-center mb-12">
       <h2
-        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary"
+        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-ibwt-primary scroll-float-in"
       >
         Lo ultimo en nuestro blog
       </h2>
-      <p class="mt-4 max-w-[700px] text-gray-600">
+      <p class="mt-4 max-w-[700px] text-gray-600 scroll-fade-in-up">
         Descubre las últimas tendencias, consejos y sobre el mundo del buceo.
         Desde destinos de buceo hasta técnicas avanzadas, nuestro blog es tu
         fuente de información para todo lo relacionado con el buceo.
       </p>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-fade-in-up"
+    >
       <div class="bg-white rounded-lg shadow-md overflow-hidden">
         <img
           src="https://placehold.co/300x200"
           alt="Top 10 Diving Spots in the Caribbean"
-          class="w-full h-48 object-cover"
+          class="w-full h-48 object-cover image-zoom-out"
         />
         <div class="p-6">
           <p class="text-sm text-ibwt-secondary font-medium">May 15, 2023</p>
@@ -41,6 +43,7 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
             class="mt-4 inline-flex items-center text-ibwt-primary hover:text-blue-500"
           >
             Leer más
+            <!-- TODO: Cambiar svg por AstroIcon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -61,11 +64,12 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
       </div>
     </section>
 
-    <section class="mt-12 text-center">
+    <section class="mt-12 text-center scroll-zone">
       <LinkSecondary
         href="/blog"
-        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-100"
+        className="border-ibwt-primary text-ibwt-primary px-4 py-2 inline-flex items-center hover:bg-blue-100 slide-in-right"
       >
+        <!-- TODO: Cambiar svg por AstroIcon -->
         Ver todos los articulos
         <svg
           xmlns="http://www.w3.org/2000/svg"

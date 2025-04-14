@@ -1,0 +1,137 @@
+@keyframes fancy-float-in {
+  0% {
+    transform: translateY(60px) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-6px) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes elegant-rotate-in {
+  0% {
+    transform: perspective(800px) rotateX(25deg) rotateY(-15deg) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: perspective(800px) rotateX(5deg) rotateY(-3deg) scale(1.01);
+    opacity: 0.85;
+  }
+  100% {
+    transform: perspective(800px) rotateX(0) rotateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-unfold {
+  0% {
+    transform: scale(1.2) rotate(-1deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.01) rotate(0.2deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scroll-zone {
+  view-timeline-name: --scroll;
+  view-timeline-axis: block;
+}
+
+.scroll-float-in {
+  animation: fancy-float-in 1.4s ease-out both;
+  animation-timeline: --scroll;
+  animation-range: entry 20% cover 35%;
+}
+
+.scroll-3d-rotate {
+  animation: elegant-rotate-in 1.6s ease-out both;
+  animation-timeline: --scroll;
+  animation-range: entry 60% cover 70%;
+}
+
+.image-zoom-out {
+  animation: zoom-unfold 1.5s ease-out both;
+  animation-timeline: --scroll;
+  animation-range: entry 5% cover 40%;
+}
+
+/* Angel */
+
+.slide-in-left {
+  animation: slide-in-left both ease-out;
+  animation-timeline: --scroll;
+  animation-range: entry 15% cover 30%;
+}
+
+.slide-in-right {
+  animation: slide-in-right both ease-out;
+  animation-timeline: --scroll;
+  animation-range: entry 15% cover 30%;
+}
+
+.scroll-fade-in-up {
+  animation: fade-in-up both ease-out;
+  animation-timeline: --scroll;
+  animation-range: entry 20% cover 30%;
+}
+
+.scale-up {
+  animation: scale-up both ease-out;
+  animation-timeline: --scroll;
+  animation-range: entry 20% cover 30%;
+}

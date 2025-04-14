@@ -3,15 +3,19 @@ import ContactInfo from "./contact-info.astro"
 import SocialMedia from "./social-media.astro"
 ---
 
-<div>
-  <h3 class="text-xl font-bold text-ibwt-primary mb-6">
-    Información de contacto
-  </h3>
+<div class="overflow-hidden scroll-zone">
+  <div class="slide-in-right">
+    <h3 class="text-xl font-bold text-ibwt-primary mb-6">
+      Información de contacto
+    </h3>
 
-  <ContactInfo />
-  <SocialMedia />
+    <ContactInfo />
+    <SocialMedia />
+  </div>
 
-  <div class="mt-8 rounded-lg overflow-hidden h-[300px] bg-gray-200">
+  <div
+    class="mt-8 rounded-lg overflow-hidden h-[300px] bg-gray-200 slide-in-right"
+  >
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4087496484285!2d-74.83992132394316!3d11.007927489155213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d2ae20f06f5%3A0x5cbb25b1ee456bee!2sTv.%2044%20%23102-167%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1sen!2sco!4v1744582119040!5m2!1sen!2sco"
       allowfullscreen=""
