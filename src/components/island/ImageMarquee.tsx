@@ -1,4 +1,4 @@
-import { Marquee } from "./Marquee"
+import { Marquee } from "@components/island/Marquee"
 
 const marqueeImages = [
   { src: "/assets/images/photo.webp", alt: "Photo 1" },
