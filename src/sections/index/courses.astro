@@ -1,6 +1,7 @@
 ---
-import Link from "@components/utilities/link.astro"
-import LinkSecondary from "@components/utilities/link-secondary.astro"
+import Link from "@components/utilities/link.astro";
+import LinkSecondary from "@components/utilities/link-secondary.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="py-16">
@@ -47,23 +48,7 @@ import LinkSecondary from "@components/utilities/link-secondary.astro"
         href="/cursos-especiales"
         className="border-ibwt-primary text-ibwt-primary slide-in-left inline-flex items-center px-4 py-2 hover:bg-blue-50"
       >
-        Ver todos los cursos
-        <!-- TODO: Cambiar svg por Astro Icon -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="ml-2 h-4 w-4"
-        >
-          <path d="M5 12h14"></path>
-          <path d="m12 5 7 7-7 7"></path>
-        </svg>
+        Ver todos los cursos <Icon name="basic-icons/right-arrow" />
       </LinkSecondary>
     </section>
   </article>
