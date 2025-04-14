@@ -13,15 +13,15 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        "@layouts": "/src/layouts",
-        "@pages": "/src/pages",
-        "@sections": "/src/sections",
-        "@components": "/src/components",
-        "@interfaces": "/src/interfaces",
-        "@styles": "/src/styles",
-        "@lib": "/src/lib",
-        "@constant": "/src/constant",
-        "@images": "/src/assets/images"
+        "@layouts/*": "./src/layouts/*",
+        "@pages/*": "./src/pages/*",
+        "@sections/*": "./src/sections/*",
+        "@components/*": "./src/components/*",
+        "@interfaces/*": "./src/interfaces/*",
+        "@styles/*": "./src/styles/*",
+        "@lib/*": "./src/lib/*",
+        "@constant/*": "./src/constant/*",
+        "@images/*": "./src/assets/images/*"
       }
     }
   },
