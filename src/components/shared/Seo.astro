@@ -1,19 +1,19 @@
 ---
-import { siteInfo } from "@constant/site-info"
+import { siteInfo } from "@constant/site-info";
 
 interface Props {
-  title?: string
-  description?: string
-  image?: string | undefined
+  title?: string;
+  description?: string;
+  image?: string | undefined;
 }
 
-const { title: siteTitle, description: siteDesc, image: siteImage } = siteInfo
+const { title: siteTitle, description: siteDesc, image: siteImage } = siteInfo;
 
 const {
   title = siteTitle,
   description = siteDesc,
   image = siteImage
-} = Astro.props
+} = Astro.props;
 ---
 
 <meta charset="UTF-8" />
