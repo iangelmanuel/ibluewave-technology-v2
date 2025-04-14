@@ -12,6 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
+      preserveSymlinks: true,
       alias: {
         "@layouts": path.resolve(__dirname, "src/layouts"),
         "@pages": path.resolve(__dirname, "src/pages"),
