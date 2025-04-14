@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components"
+
+import { siteInfo } from "@constant/site-info"
+
+const { address, phone, email } = siteInfo
+---
+
+<div class="space-y-6">
+  <div class="flex items-start">
+    <Icon
+      name="basic-icons/pin"
+      class="h-5 w-5 text-ibwt-secondary mt-1 mr-3"
+    />
+
+    <div>
+      <h4 class="font-medium">Dirección</h4>
+      <p class="text-gray-600 mt-1">{address}</p>
+    </div>
+  </div>
+
+  <div class="flex items-start">
+    <Icon
+      name="basic-icons/phone"
+      class="h-5 w-5 text-ibwt-secondary mt-1 mr-3"
+    />
+
+    <div>
+      <h4 class="font-medium">Número de télefono</h4>
+      <p class="text-gray-600 mt-1">{phone}</p>
+    </div>
+  </div>
+
+  <div class="flex items-start">
+    <Icon
+      name="basic-icons/email"
+      class="h-5 w-5 text-ibwt-secondary mt-1 mr-3"
+    />
+
+    <div>
+      <h4 class="font-medium">Correo electrónico</h4>
+      <a
+        href={`mailto:${email}`}
+        class="text-gray-600 hover:text-ibwt-primary hover:underline mt-1"
+        >{email}</a
+      >
+    </div>
+  </div>
+</div>
