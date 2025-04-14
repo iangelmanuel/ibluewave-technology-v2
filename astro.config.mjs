@@ -1,35 +1,29 @@
-// @ts-check
 import { defineConfig } from "astro/config"
+import path from "path"
 import { fileURLToPath } from "url"
 
 import tailwindcss from "@tailwindcss/vite"
 import react from "@astrojs/react"
 import icon from "astro-icon"
 
-// https://astro.build/config
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        "@layouts": fileURLToPath(new URL("./src/layouts", import.meta.url)),
-        "@pages": fileURLToPath(new URL("./src/pages", import.meta.url)),
-        "@sections": fileURLToPath(new URL("./src/sections", import.meta.url)),
-        "@components": fileURLToPath(
-          new URL("./src/components", import.meta.url)
-        ),
-        "@interfaces": fileURLToPath(
-          new URL("./src/interfaces", import.meta.url)
-        ),
-        "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
-        "@lib": fileURLToPath(new URL("./src/lib", import.meta.url)),
-        "@constant": fileURLToPath(new URL("./src/constant", import.meta.url)),
-        "@images": fileURLToPath(
-          new URL("./src/assets/images", import.meta.url)
-        )
+        "@layouts": path.resolve(__dirname, "./src/layouts"),
+        "@pages": path.resolve(__dirname, "./src/pages"),
+        "@sections": path.resolve(__dirname, "./src/sections"),
+        "@components": path.resolve(__dirname, "./src/components"),
+        "@interfaces": path.resolve(__dirname, "./src/interfaces"),
+        "@styles": path.resolve(__dirname, "./src/styles"),
+        "@lib": path.resolve(__dirname, "./src/lib"),
+        "@constant": path.resolve(__dirname, "./src/constant"),
+        "@images": path.resolve(__dirname, "./src/assets/images")
       }
     }
   },
-
   integrations: [react(), icon()]
 })
