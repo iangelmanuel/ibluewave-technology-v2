@@ -92,7 +92,7 @@ const infoContactIcons = [
         <h3 class="mb-6 text-center text-lg font-bold xl:text-start">
           Redireccion de Navegación
         </h3>
-        <ul class="space-y-3 text-center xl:text-center">
+        <ul class="space-y-3 text-center xl:text-start">
           {
             navigation.map(({ text, href }) => (
               <li>
@@ -109,10 +109,10 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="mb-6 text-center text-lg font-bold xl:text-center">
+        <h3 class="mb-6 text-center text-lg font-bold xl:text-start">
           Cursos especiales
         </h3>
-        <ul class="space-y-3 text-center xl:text-center">
+        <ul class="space-y-3 text-center xl:text-start">
           <li>
             <a
               href="#"
@@ -152,13 +152,13 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="mb-6 text-center text-lg font-bold xl:text-center">
+        <h3 class="mb-6 text-center text-lg font-bold xl:text-start">
           Información del contacto
         </h3>
         <ul class="space-y-3">
           {
             infoContactIcons.map(({ name, data }) => (
-              <li class="flex items-start justify-center">
+              <li class="flex items-start justify-center xl:justify-start">
                 <Icon
                   name={name}
                   class="text-ibwt-secondary mt-1 mr-2 h-5 w-5"
