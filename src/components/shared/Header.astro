@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
 
 import Navbar from "@components/shared/Navbar.astro"
 import Link from "@components/utilities/Link.astro"
@@ -7,27 +8,102 @@ import Link from "@components/utilities/Link.astro"
 import Logo from "@images/logo.webp"
 ---
 
-<header class="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
+<header
+  class="sticky top-0 z-50 w-full border-b bg-white/80 p-5 backdrop-blur-sm xl:px-0"
+>
   <section class="container mx-auto flex h-16 items-center justify-between">
     <div class="flex items-center gap-2">
       <Image
         src={Logo}
         alt="Logo de iBluewave Technology"
-        class="h-12 w-12 rounded-full object-cover"
-        width={48}
-        height={48}
+        class="object-cover"
+        width="60"
+        height="60"
       />
 
-      <span class="text-ibwt-primary text-xl font-extrabold">iBluewave</span>
-      <span class="text-ibwt-secondary text-xl font-light">Technology</span>
+      <span class="text-ibwt-primary hidden text-xl font-extrabold xl:block"
+        >iBluewave</span
+      >
+      <span class="text-ibwt-secondary hidden text-xl font-light xl:block"
+        >Technology</span
+      >
     </div>
 
     <Navbar />
 
-    <Link
-      href="/cursos-especiales"
-      className="bg-ibwt-secondary hidden rounded-md px-4 py-2 text-white md:inline-flex"
-      >Cursos especiales</Link
+    <div class="hidden xl:block">
+      <Link
+        href="/cursos-especiales"
+        className="bg-ibwt-secondary hidden rounded-md px-4 py-2 text-white xl:inline-flex"
+        >Cursos especiales</Link
+      >
+    </div>
+
+    <button
+      id="toggle-menu"
+      aria-label="Toggle Menu"
+      class="z-50 block focus:outline-none xl:hidden"
     >
+      <Icon
+        name="basic-icons/bars"
+        size={40}
+        class="text-gray-700"
+      />
+    </button>
   </section>
 </header>
+
+<script>
+  import { $ } from "@lib/dom"
+
+  document.addEventListener("astro:page-load", () => {
+    const $topMenu = $("header") as HTMLElement
+    const $toggleMenu = $("#toggle-menu") as HTMLButtonElement
+    const $closeMenu = $("#close-menu") as HTMLButtonElement
+    const $phoneMenu = $("#phone-menu") as HTMLElement
+
+    // Toggle Phone Menu
+    $toggleMenu.addEventListener("click", togglePhoneMenu)
+
+    // Close Phone Menu
+    $closeMenu.addEventListener("click", togglePhoneMenu)
+    document.addEventListener("click", (e) => {
+      if (
+        !$phoneMenu.contains(e.target as Node) &&
+        !$toggleMenu.contains(e.target as Node)
+      ) {
+        if ($phoneMenu.classList.contains("translate-y-0")) {
+          closePhoneMenu()
+        }
+      }
+    })
+
+    function togglePhoneMenu() {
+      $phoneMenu.classList.toggle("translate-y-0")
+      $phoneMenu.classList.toggle("-translate-y-full")
+    }
+
+    function closePhoneMenu() {
+      $phoneMenu.classList.remove("translate-y-0")
+      $phoneMenu.classList.add("-translate-y-full")
+    }
+
+    // Hide Top Menu on Scroll Down
+    window.addEventListener("scroll", onScrollDown, { passive: true })
+
+    let lastScrollTop = 0
+
+    function onScrollDown() {
+      const { scrollY } = window
+
+      if (scrollY > lastScrollTop) {
+        $topMenu.classList.remove("translate-y-0")
+        $topMenu.classList.add("-translate-y-full")
+      } else if (scrollY < lastScrollTop) {
+        $topMenu.classList.remove("-translate-y-full")
+        $topMenu.classList.add("translate-y-0")
+      }
+      lastScrollTop = scrollY <= 0 ? 0 : scrollY
+    }
+  })
+</script>

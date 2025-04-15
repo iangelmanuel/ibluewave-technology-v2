@@ -20,7 +20,7 @@ const infoContactIcons = [
 ---
 
 <section class="bg-blue-950 pt-16 text-white">
-  <div class="container mx-auto">
+  <div class="container mx-auto p-5 xl:p-0">
     <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div>
         <h2 class="text-3xl font-bold">
@@ -34,7 +34,7 @@ const infoContactIcons = [
       <div class="flex flex-col justify-end gap-4 sm:flex-row">
         <Link
           href="/cursos-especiales"
-          className="bg-ibwt-secondary px-6 py-3 text-white"
+          className="bg-ibwt-secondary px-6 py-3 text-center text-white xl:text-start"
         >
           Empezar hoy
         </Link>
@@ -49,7 +49,7 @@ const infoContactIcons = [
 </section>
 
 <footer class="bg-blue-950 py-12 text-white">
-  <section class="container mx-auto">
+  <section class="container mx-auto p-5 xl:p-0">
     <article class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
       <section>
         <div class="mb-6 flex items-center gap-2">
@@ -69,7 +69,7 @@ const infoContactIcons = [
           experiencias únicas en el mundo del buceo.
         </p>
 
-        <div class="mt-6 flex space-x-4">
+        <div class="mt-6 flex gap-x-4">
           {
             socialMediaIcon.map(({ name, href }) => (
               <a
@@ -89,8 +89,10 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="mb-6 text-lg font-bold">Redireccion de Navegación</h3>
-        <ul class="space-y-3">
+        <h3 class="mb-6 text-center text-lg font-bold xl:text-start">
+          Redireccion de Navegación
+        </h3>
+        <ul class="space-y-3 text-center xl:text-center">
           {
             navigation.map(({ text, href }) => (
               <li>
@@ -107,8 +109,10 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="mb-6 text-lg font-bold">Cursos especiales</h3>
-        <ul class="space-y-3">
+        <h3 class="mb-6 text-center text-lg font-bold xl:text-center">
+          Cursos especiales
+        </h3>
+        <ul class="space-y-3 text-center xl:text-center">
           <li>
             <a
               href="#"
@@ -148,11 +152,13 @@ const infoContactIcons = [
       </section>
 
       <section>
-        <h3 class="mb-6 text-lg font-bold">Información del contacto</h3>
+        <h3 class="mb-6 text-center text-lg font-bold xl:text-center">
+          Información del contacto
+        </h3>
         <ul class="space-y-3">
           {
             infoContactIcons.map(({ name, data }) => (
-              <li class="flex items-start">
+              <li class="flex items-start justify-center">
                 <Icon
                   name={name}
                   class="text-ibwt-secondary mt-1 mr-2 h-5 w-5"

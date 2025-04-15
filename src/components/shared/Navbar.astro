@@ -1,10 +1,15 @@
 ---
+import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
+
 import { navigation } from "@constant/navigation"
+
+import Logo from "@images/logo.webp"
 
 const { pathname } = Astro.url
 ---
 
-<nav class="hidden gap-6 md:flex">
+<nav class="hidden gap-6 xl:flex">
   {
     navigation.map(({ text, href }) => (
       <div>
@@ -26,4 +31,71 @@ const { pathname } = Astro.url
       </div>
     ))
   }
+</nav>
+
+<nav
+  id="phone-menu"
+  class="fixed top-0 right-0 z-[60] w-full -translate-y-full items-center rounded-b-lg bg-white p-10 shadow-lg transition-transform duration-500 ease-in-out"
+>
+  <div class="mb-5 flex items-center justify-between">
+    <Image
+      src={Logo}
+      alt="Logo de iBluewave Technology"
+      width="60"
+      height="60"
+      class="object-contain"
+    />
+
+    <button
+      id="close-menu"
+      aria-label="Cerrar menu"
+      class="focus:outline-none"
+    >
+      <Icon
+        name="basic-icons/close"
+        size={40}
+        class="text-gray-700"
+      />
+    </button>
+  </div>
+
+  <ul class="space-y-7">
+    {
+      navigation.map(({ text, href }) => (
+        <li
+          class:list={[
+            "transition-color w-full px-5 py-2 text-gray-700 duration-300",
+            {
+              "bg-ibwt-primary rounded-lg text-white":
+                pathname === href || (href !== "/" && pathname.startsWith(href))
+            }
+          ]}
+        >
+          <a
+            href={href}
+            class="font-semibold"
+          >
+            {text}
+          </a>
+        </li>
+      ))
+    }
+
+    <li
+      class:list={[
+        "transition-color w-full px-5 py-2 text-gray-700 duration-300",
+        {
+          "bg-ibwt-primary rounded-lg text-white":
+            pathname === "/cursos-especiales"
+        }
+      ]}
+    >
+      <a
+        href="/cursos-especiales"
+        class="font-semibold"
+      >
+        Cursos especiales
+      </a>
+    </li>
+  </ul>
 </nav>
