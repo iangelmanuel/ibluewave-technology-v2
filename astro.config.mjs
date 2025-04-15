@@ -9,5 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  output: "static",
+  site: "https://ibluewavetechnology.com",
   integrations: [react(), icon()]
 })
