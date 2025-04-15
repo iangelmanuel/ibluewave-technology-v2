@@ -15,11 +15,13 @@ const { pathname } = Astro.url
           {text}
         </a>
 
-        {pathname === href && (
+        {pathname === href || (href !== "/" && pathname.startsWith(href)) ? (
           <div
-            transition:name="navigation"
-            class="mt-2 h-1 w-full rounded-full bg-blue-600"
+            transition:name="navbar-navigation"
+            class="border-ibwt-primary border-b-2"
           />
+        ) : (
+          <div class="mx-4 border-b-2 border-transparent" />
         )}
       </div>
     ))
