@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content"
+import type { GetStaticPaths } from "astro"
+
+import Layout from "@layouts/Layout.astro"
+import HeroCourse from "@sections/course/HeroCourse.astro"
+import MainContentCourse from "@sections/course/MainContentCourse.astro"
+import RelatedCourse from "@sections/course/RelatedCourse.astro"
+
+export const getStaticPaths = (async () => {
+  const courses = await getCollection("courses")
+
+  return courses.map((course) => ({
+    params: { slug: course.slug },
+    props: { course }
+  }))
+}) satisfies GetStaticPaths
+
+const { course } = Astro.props
+
+const {
+  id,
+  title,
+  description,
+  image,
+  courseContent,
+  duration,
+  requirements,
+  includes
+} = course.data
+---
+
+<Layout
+  title={`iBluewave - ${title}`}
+  description={description}
+  image={image.src}
+>
+  <HeroCourse
+    title={title}
+    description={description}
+    duration={duration}
+  />
+  <MainContentCourse
+    title={title}
+    image={image}
+    courseContent={courseContent}
+    requirements={requirements}
+    includes={includes}
+  />
+  <RelatedCourse id={id} />
+</Layout>

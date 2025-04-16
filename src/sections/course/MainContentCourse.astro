@@ -1,0 +1,169 @@
+---
+import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
+
+import WhatsAppLink from "@components/utilities/WhatsAppLink.astro"
+
+interface ImagesType {
+  src: string
+  width: number
+  height: number
+  format: "svg" | "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "avif"
+}
+
+interface Props {
+  title: string
+  image: ImagesType
+  courseContent: string[]
+  requirements: string[] | undefined
+  includes: string[] | undefined
+}
+
+const { title, image, courseContent, requirements, includes } = Astro.props
+---
+
+<div class="container mx-auto px-5 py-16 xl:px-0">
+  <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <!-- Left Column - Course Details -->
+    <div class="space-y-8 lg:col-span-2">
+      <!-- Lo que aprenderás -->
+      <!-- {
+        courseContent && (
+          <>
+            <section>
+              <h2 class="text-ibwt-secondary mb-6 text-2xl font-bold">
+                Lo que aprenderás
+              </h2>
+
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {courseContent.map((text) => (
+                  <div class="flex items-start gap-2">
+                    <Icon
+                      name="basic-icons/check"
+                      size={18}
+                      class="text-ibwt-primary mt-0.5 flex-shrink-0"
+                    />
+                    <span>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <div class="border-b border-gray-200" />
+          </>
+        )
+      } -->
+
+      <!-- Requisitos -->
+      {
+        requirements && (
+          <>
+            <section>
+              <h2 class="text-ibwt-secondary mb-6 text-2xl font-bold">
+                Requisitos
+              </h2>
+
+              <div class="space-y-3">
+                {requirements.map((text) => (
+                  <div class="flex items-start gap-3">
+                    <Icon
+                      name="basic-icons/check-2"
+                      size={18}
+                      class="text-ibwt-primary mt-0.5 flex-shrink-0"
+                    />
+                    <span>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <div class="border-b border-gray-200" />
+          </>
+        )
+      }
+
+      <!-- Contenido del curso -->
+      <section>
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-ibwt-secondary text-2xl font-bold">
+            Contenido del curso
+          </h2>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border">
+          <div class="divide-y">
+            {
+              courseContent.map((text, i) => (
+                <div class="bg-ibwt-primary/10 hover:bg-ibwt-primary/20 p-4 transition-colors">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-medium">
+                      {`${i + 1}.`} {text}
+                    </h3>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column - Pricing Card -->
+    <div>
+      <div class="sticky top-6">
+        <div class="overflow-hidden rounded-lg border shadow-lg">
+          <div class="space-y-6 p-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <Image
+                  src={image}
+                  alt={`Curso de ${title}`}
+                  width={image.width}
+                  height={image.height}
+                  class="w-full rounded-md object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <WhatsAppLink
+                href="https://api.whatsapp.com/message/BIJ6IGOSH3ONG1?autoload=1&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-1 bg-green-500 px-4 py-2 text-lg font-medium text-white hover:bg-green-600"
+              >
+                <Icon
+                  name="social-media/whatsapp"
+                  size={25}
+                />
+                <p>Inscribirme ahora</p>
+              </WhatsAppLink>
+            </div>
+
+            <div class="border-b border-gray-200"></div>
+
+            {
+              includes && (
+                <>
+                  <div class="space-y-4">
+                    <h3 class="text-lg font-bold">Este curso incluye:</h3>
+                    {includes.map((text) => (
+                      <div class="flex items-start gap-3">
+                        <Icon
+                          name="basic-icons/box"
+                          size={20}
+                          class="text-ibwt-primary mt-0.5 flex-shrink-0"
+                        />
+                        <span>{text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

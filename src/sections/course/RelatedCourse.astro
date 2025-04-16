@@ -1,0 +1,66 @@
+---
+import { getCollection } from "astro:content"
+import { Image } from "astro:assets"
+
+import Link from "@components/utilities/Link.astro"
+
+interface Props {
+  id: number
+}
+
+const { id } = Astro.props
+
+const courses = await getCollection("courses")
+
+const threeCoursesFilteredAndSorted = courses
+  .filter((course) => course.id !== id.toString())
+  .slice(0, 3)
+  .sort((a, b) => a.data.id - b.data.id)
+---
+
+<!-- Related Courses -->
+<section class="bg-ibwt-primary/10 px-5 py-16 xl:px-0">
+  <article class="container mx-auto px-4">
+    <h2 class="text-ibwt-secondary mb-8 text-2xl font-bold">
+      Otros cursos que podrían interesarte
+    </h2>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        threeCoursesFilteredAndSorted.map(({ data, slug }) => (
+          <div class="overflow-hidden rounded-lg border bg-white transition-shadow hover:shadow-lg">
+            <div class="relative h-48">
+              <Image
+                src={data.image}
+                alt="Advanced Open Water Diver"
+                width={500}
+                height={300}
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="text-ibwt-primary mb-2 text-lg font-bold">
+                {data.title}
+              </h3>
+
+              <p class="mb-3 text-sm text-gray-600">
+                {data.description.length > 100
+                  ? `${data.description.slice(0, 100)}...`
+                  : data.description}
+              </p>
+
+              <div>
+                <Link
+                  href={`/cursos-especiales/${slug}`}
+                  className="bg-ibwt-primary text-white px-3 py-1"
+                >
+                  Ver curso
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </article>
+</section>

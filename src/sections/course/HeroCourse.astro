@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components"
+import { Image } from "astro:assets"
+
+interface Props {
+  title: string
+  description: string
+  video?: string
+  duration: string | undefined
+}
+
+const { title, description, duration } = Astro.props
+---
+
+<section class="bg-gradient-to-r from-blue-950 to-blue-700 px-5 py-16 xl:px-0">
+  <article class="container mx-auto px-4">
+    <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+      <div>
+        <h1 class="text-ibwt-secondary mb-4 text-3xl font-bold md:text-4xl">
+          {title}
+        </h1>
+        <p class="mb-6 text-lg text-gray-300">
+          {description}
+        </p>
+
+        <div class="mb-6 flex items-center gap-2">
+          <span
+            class="bg-ibwt-secondary rounded-full px-2.5 py-0.5 text-xs text-white hover:bg-orange-400"
+            >Principiantes</span
+          >
+        </div>
+
+        {
+          duration && (
+            <div class="flex items-center gap-2 text-cyan-100">
+              <Icon
+                name="basic-icons/clock"
+                class="text-ibwt-secondary"
+              />
+              <span>{duration}</span>
+            </div>
+          )
+        }
+      </div>
+
+      <div class="relative h-[300px] overflow-hidden rounded-lg shadow-lg">
+        <Image
+          src="https://placehold.co/800x600/164e63/FFFFFF/png?text=Curso+de+Buceo"
+          alt="Open Water Diver - Certificación PADI"
+          width={800}
+          height={600}
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div
+          class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+        >
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
