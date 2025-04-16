@@ -120,6 +120,7 @@ const { title, image, courseContent, requirements, includes } = Astro.props
                   alt={`Curso de ${title}`}
                   width={image.width}
                   height={image.height}
+                  transition:name={`animation-${title}`}
                   class="w-full rounded-md object-cover"
                 />
               </div>

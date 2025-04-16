@@ -43,11 +43,13 @@ import HeroImage from "@images/hero-without-bg.webp"
       </p>
     </section>
 
-    <section class="mt-8 flex items-center justify-center gap-4 sm:flex-row">
+    <section
+      class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row xl:flex-row"
+    >
       <div class="hero-btn-primary">
         <Link
           href="/cursos-especiales"
-          className="bg-ibwt-secondary px-6 py-3 text-white"
+          className="bg-ibwt-secondary w-full px-6 py-3 text-white"
         >
           Explorar Cursos
         </Link>
@@ -56,7 +58,7 @@ import HeroImage from "@images/hero-without-bg.webp"
       <div class="hero-btn-secondary">
         <LinkSecondary
           href="#sobre-nosotros"
-          className="border-white px-6 py-3 text-white hover:bg-white/10"
+          className="w-full border-white px-6 py-3 text-white hover:bg-white/10"
         >
           Saber más
         </LinkSecondary>
@@ -64,80 +66,3 @@ import HeroImage from "@images/hero-without-bg.webp"
     </section>
   </article>
 </section>
-
-<style>
-  @keyframes heroTitleIn {
-    0% {
-      opacity: 0;
-      transform: translateY(50px) scale(0.96);
-      clip-path: inset(100% 0 0 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  @keyframes heroParagraphIn {
-    0% {
-      opacity: 0;
-      transform: translateY(40px) scale(0.97);
-      clip-path: inset(100% 0 0 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  @keyframes heroButtonLeftIn {
-    0% {
-      opacity: 0;
-      transform: translateX(-40px) translateY(15px) scale(0.98);
-      clip-path: inset(0 100% 0 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) translateY(0) scale(1);
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  @keyframes heroButtonRightIn {
-    0% {
-      opacity: 0;
-      transform: translateX(40px) translateY(15px) scale(0.98);
-      clip-path: inset(0 0 0 100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) translateY(0) scale(1);
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  .hero-title {
-    opacity: 0;
-    animation: heroTitleIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
-  }
-
-  .hero-paragraph {
-    opacity: 0;
-    animation: heroParagraphIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
-  }
-
-  .hero-btn-primary {
-    opacity: 0;
-    animation: heroButtonLeftIn 1s cubic-bezier(0.23, 1, 0.32, 1) 1s forwards;
-  }
-
-  .hero-btn-secondary {
-    opacity: 0;
-    display: inline-flex;
-    overflow: hidden;
-    will-change: opacity, transform, clip-path;
-    animation: heroButtonRightIn 1s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
-  }
-</style>

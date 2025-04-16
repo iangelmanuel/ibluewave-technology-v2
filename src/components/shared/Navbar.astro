@@ -12,10 +12,10 @@ const { pathname } = Astro.url
 <nav class="hidden gap-6 xl:flex">
   {
     navigation.map(({ text, href }) => (
-      <div>
+      <div class="transition-all duration-500 hover:scale-105">
         <a
           href={href}
-          class="font-medium transition-colors hover:text-blue-600"
+          class="hover:text-ibwt-primary transition-color font-medium duration-300"
         >
           {text}
         </a>

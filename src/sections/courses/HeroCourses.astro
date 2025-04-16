@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets"
+import CoursesHero from "@images/courses-hero.webp"
+---
+
+<section class="relative h-[700px] overflow-hidden text-white">
+  <div>
+    <Image
+      src={CoursesHero}
+      alt="Hero de cursos de buceo"
+      width="1920"
+      height="700"
+      class="h-screen w-full object-cover brightness-50"
+    />
+  </div>
+
+  <div
+    class="absolute inset-0 container mx-auto flex flex-col items-center justify-center px-4 py-16 xl:max-w-3xl"
+  >
+    <h1
+      class="text-ibwt-secondary mb-4 text-center text-4xl font-bold md:text-5xl lg:text-6xl"
+    >
+      Explora Nuestros Cursos de Buceo
+    </h1>
+
+    <p class="mx-auto text-center text-xl text-white">
+      Descubre el fascinante mundo submarino con nuestra amplia gama de cursos
+      diseñados para todos los niveles, desde principiantes hasta buceadores
+      experimentados.
+    </p>
+  </div>
+</section>

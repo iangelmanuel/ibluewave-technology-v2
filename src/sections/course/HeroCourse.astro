@@ -16,14 +16,16 @@ const { title, description, duration } = Astro.props
   <article class="container mx-auto px-4">
     <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
       <div>
-        <h1 class="text-ibwt-secondary mb-4 text-3xl font-bold md:text-4xl">
+        <h1
+          class="text-ibwt-secondary hero-title mb-4 text-3xl font-bold md:text-4xl"
+        >
           {title}
         </h1>
-        <p class="mb-6 text-lg text-gray-300">
+        <p class="hero-paragraph mb-6 text-lg text-gray-300">
           {description}
         </p>
 
-        <div class="mb-6 flex items-center gap-2">
+        <div class="hero-title mb-6 flex items-center gap-2">
           <span
             class="bg-ibwt-secondary rounded-full px-2.5 py-0.5 text-xs text-white hover:bg-orange-400"
             >Principiantes</span
@@ -32,7 +34,7 @@ const { title, description, duration } = Astro.props
 
         {
           duration && (
-            <div class="flex items-center gap-2 text-cyan-100">
+            <div class="hero-title flex items-center gap-2 text-cyan-100">
               <Icon
                 name="basic-icons/clock"
                 class="text-ibwt-secondary"
@@ -49,7 +51,7 @@ const { title, description, duration } = Astro.props
           alt="Open Water Diver - Certificación PADI"
           width={800}
           height={600}
-          class="absolute inset-0 h-full w-full object-cover"
+          class="hero-btn-secondary absolute inset-0 h-full w-full object-cover"
         />
 
         <div
