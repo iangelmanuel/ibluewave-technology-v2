@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-html {
-  scroll-behavior: smooth;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -98,6 +94,20 @@ html {
   }
 }
 
+@font-face {
+  font-family: "Gabarito";
+  src: url("/assets/fonts/Gabarito.ttf") format("ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NationalPark";
+  src: url("/assets/fonts/NationalPark.ttf") format("ttf");
+  font-style: italic;
+  font-display: swap;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -113,4 +123,25 @@ html {
   to {
     transform: translateY(calc(-100% - var(--gap)));
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gabarito {
+  font-family: "Gabarito", sans-serif;
+}
+
+.national-park {
+  font-family: "NationalPark", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gabarito", sans-serif;
 }
