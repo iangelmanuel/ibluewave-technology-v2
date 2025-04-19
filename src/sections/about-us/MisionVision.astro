@@ -1,0 +1,91 @@
+---
+import { Icon } from "astro-icon/components"
+
+const misionVision = [
+  {
+    title: "Nuestra Misión",
+    description:
+      "Nuestra misión es ir más allá de lo técnico para convertir cada experiencia marina en una forma de conexión consciente con la naturaleza. Aspiramos a fortalecer el vínculo entre las personas y el océano, desde la responsabilidad y el respeto.",
+    color: "blue",
+    objectives: [
+      "Fomentar la exploración responsable y segura del entorno marino.",
+      "Difundir valores de sostenibilidad y conservación del océano.",
+      "Generar conciencia ambiental a través de la experiencia directa con el mar."
+    ]
+  },
+  {
+    title: "Nuestra Visión",
+    description:
+      "Nuestra visión es consolidarnos como un referente en innovación y conciencia ambiental dentro del mundo submarino, promoviendo una relación armónica entre las personas y los ecosistemas marinos.",
+    color: "orange",
+    objectives: [
+      "Desarrollar herramientas que apoyen la conservación marina.",
+      "Ampliar nuestra red de aliados comprometidos con el océano.",
+      "Inspirar nuevas generaciones a cuidar y valorar los recursos marinos."
+    ]
+  }
+]
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-5 xl:px-0">
+    <div class="scroll-zone mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="text-ibwt-primary scroll-float-in mb-6 text-3xl font-bold">
+        Guiados por una causa mayor
+      </h2>
+      <p class="scroll-fade-in-up text-gray-700">
+        Nuestra misión y visión reflejan el compromiso profundo de transformar
+        cada interacción con el mar en una oportunidad para aprender, respetar y
+        proteger. Nos guía el deseo de dejar un legado positivo en los océanos.
+      </p>
+    </div>
+
+    <div class="scroll-zone grid gap-12 overflow-x-hidden md:grid-cols-2">
+      {
+        misionVision.map(({ title, description, color, objectives }) => (
+          <div
+            class:list={[
+              "relative overflow-hidden rounded-lg bg-white p-8 shadow-lg",
+              color === "blue" ? "slide-in-left" : "slide-in-right"
+            ]}
+          >
+            <div
+              class:list={[
+                "absolute top-0 right-0 z-0 -mt-16 -mr-16 h-32 w-32 rounded-bl-full opacity-30",
+                color === "blue" ? "bg-ibwt-primary" : "bg-ibwt-secondary"
+              ]}
+            />
+            <div class="relative z-10">
+              <div
+                class:list={[
+                  "mb-6 flex h-16 w-16 items-center justify-center rounded-full text-white",
+                  color === "blue" ? "bg-ibwt-primary" : "bg-ibwt-secondary"
+                ]}
+              >
+                <Icon
+                  name="basic-icons/check"
+                  size={60}
+                />
+              </div>
+              <h3 class="text-ibwt-primary mb-4 text-2xl font-bold">{title}</h3>
+              <p class="mb-6 text-gray-700">{description}</p>
+
+              <ul class="space-y-3">
+                {objectives.map((objective) => (
+                  <li class="flex items-start gap-x-2">
+                    <Icon
+                      name="basic-icons/check"
+                      size={30}
+                      class="text-ibwt-primary"
+                    />
+                    <span>{objective}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

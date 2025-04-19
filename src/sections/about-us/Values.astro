@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components"
+
+const values = [
+  {
+    icon: "basic-icons/check",
+    value: "Compromiso ambiental",
+    description:
+      "Trabajamos activamente por la protección del océano, fomentando prácticas responsables que prioricen la vida marina."
+  },
+  {
+    icon: "basic-icons/check",
+    value: "Educación consciente",
+    description:
+      "Creemos en el poder de la educación como motor de cambio, enfocándonos en el aprendizaje desde la experiencia y el respeto por el ecosistema."
+  },
+  {
+    icon: "basic-icons/check",
+    value: "Pasión por el océano",
+    description:
+      "Nos inspira el mar en toda su grandeza. Nuestra energía y dedicación nacen del amor profundo por el mundo submarino."
+  },
+  {
+    icon: "basic-icons/check",
+    value: "Inclusión",
+    description:
+      "Valoramos la diversidad y creemos que todas las personas tienen un lugar en la exploración y protección del mar."
+  },
+  {
+    icon: "basic-icons/check",
+    value: "Innovación",
+    description:
+      "Diseñamos y desarrollamos soluciones funcionales como boyas y maletines que apoyan la actividad subacuática de manera segura y eficiente."
+  },
+  {
+    icon: "basic-icons/check",
+    value: "Trabajo en comunidad",
+    description:
+      "Avanzamos juntos. Nuestra red de colaboradores y aliados refuerza nuestro compromiso con el océano y su futuro."
+  }
+]
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-5 xl:px-0">
+    <div class="scroll-zone mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="scroll-float-in text-ibwt-primary mb-6 text-3xl font-bold">
+        Principios que nos guían bajo el agua
+      </h2>
+      <p class="scroll-fade-in-up text-gray-700">
+        En cada acción, proyecto y decisión, nuestros valores marcan el rumbo.
+        Son los pilares de nuestra identidad como empresa y comunidad dedicada
+        al respeto y preservación del entorno marino.
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {
+        values.map(({ icon, value, description }) => (
+          <div class="scroll-zone scroll-3d-rotate rounded-xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100">
+              <Icon
+                name={icon}
+                size={60}
+                class="text-ibwt-secondary"
+              />
+            </div>
+            <h3 class="text-ibwt-primary mb-3 text-xl font-bold">{value}</h3>
+            <p class="text-gray-700">{description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,133 @@
+---
+const milestones = [
+  { text: "Fundación de iBlueWaveTechnology en 2022." },
+  { text: "Obtención de la beca de diversidad NAUI por Ricardo de la Torre." },
+  { text: "Alianza con iniciativas de conservación marina." },
+  { text: "Expansión de nuestros proyectos hacia nuevas regiones." },
+  { text: "Desarrollo de equipos especializados como boyas y maletines." }
+]
+---
+
+<section
+  id="nuestra-historia"
+  class="bg-blue-50 py-16"
+>
+  <div class="container mx-auto px-5 xl:px-0">
+    <div class="scroll-zone mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="text-ibwt-primary scroll-float-in mb-6 text-3xl font-bold">
+        Una visión que nace del océano
+      </h2>
+      <p class="scroll-fade-in-up text-gray-700">
+        Desde 2022, iBlueWaveTechnology ha sido un puente entre la exploración
+        submarina y la conciencia ambiental. Nuestra historia está profundamente
+        enraizada en el amor por el mar y el compromiso con su protección.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center gap-12 lg:flex-row">
+      <div class="lg:w-1/2">
+        <div class="space-y-4 text-gray-700">
+          <p class="scroll-zone scroll-fade-in-up">
+            La empresa fue fundada por Ricardo de la Torre, apneista e
+            instructor NAUI con una fuerte vocación por la enseñanza y la
+            naturaleza. Su pasión por el océano lo llevó a crear una iniciativa
+            centrada en la exploración responsable del entorno marino.
+          </p>
+          <p class="scroll-zone scroll-fade-in-up">
+            Con el paso del tiempo, iBlueWaveTechnology se ha consolidado como
+            un espacio que fusiona la técnica, el desarrollo de herramientas y
+            la conciencia ecológica. A través de nuestras acciones promovemos
+            prácticas sostenibles que buscan generar impacto positivo en el
+            ecosistema marino.
+          </p>
+          <p class="scroll-zone scroll-fade-in-up">
+            Más allá de los logros individuales, somos una comunidad que cree en
+            la colaboración para preservar el océano. Al formar parte de
+            iBlueWaveTechnology, te unes a una red de apoyo comprometida con la
+            conservación y la educación ambiental.
+          </p>
+        </div>
+
+        <div class="slide-in-left scroll-zone mt-8">
+          <h3 class="text-ibwt-primary mb-4 text-xl font-semibold">
+            Hitos Importantes
+          </h3>
+          <ul class="space-y-3">
+            {
+              milestones.map((milestone, index) => (
+                <li class="flex items-start">
+                  <span class="mt-0.5 mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
+                    {index + 1}
+                  </span>
+                  <div>{milestone.text}</div>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 lg:w-1/2">
+        <div
+          class="scroll-zone image-zoom-out relative h-64 overflow-hidden rounded-lg shadow-lg"
+        >
+          <img
+            src="https://placehold.co/600x800"
+            alt="Historia de la Empresa 1"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+          >
+            <span class="font-medium text-white">Nuestra Primera Oficina</span>
+          </div>
+        </div>
+
+        <div
+          class="scroll-zone image-zoom-out relative mt-8 h-64 overflow-hidden rounded-lg shadow-lg"
+        >
+          <img
+            src="https://placehold.co/600x800"
+            alt="Historia de la Empresa 2"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+          >
+            <span class="font-medium text-white">Primera Clase de Buceo</span>
+          </div>
+        </div>
+
+        <div
+          class="scroll-zone image-zoom-out relative h-64 overflow-hidden rounded-lg shadow-lg"
+        >
+          <img
+            src="https://placehold.co/600x800"
+            alt="Historia de la Empresa 3"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+          >
+            <span class="font-medium text-white">Desarrollo Tecnológico</span>
+          </div>
+        </div>
+
+        <div
+          class="scroll-zone image-zoom-out relative mt-8 h-64 overflow-hidden rounded-lg shadow-lg"
+        >
+          <img
+            src="https://placehold.co/600x800"
+            alt="Historia de la Empresa 4"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+          >
+            <span class="font-medium text-white">Expansión Global</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
