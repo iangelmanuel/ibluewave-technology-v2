@@ -37,11 +37,11 @@ const QAAs = [
 
 <section class="bg-blue-50 py-16">
   <article class="container mx-auto px-5 xl:px-0">
-    <div class="mx-auto mb-16 max-w-3xl text-center">
-      <h2 class="text-ibwt-primary mb-6 text-3xl font-bold">
+    <div class="scroll-zone mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="text-ibwt-primary scroll-float-in mb-6 text-3xl font-bold">
         Preguntas Frecuentes
       </h2>
-      <p class="text-gray-700">
+      <p class="scroll-fade-in-up text-gray-700">
         Respuestas a las preguntas más comunes sobre nuestros servicios y
         productos
       </p>
@@ -51,7 +51,7 @@ const QAAs = [
       <div class="space-y-6">
         {
           QAAs.map(({ question, answer }) => (
-            <div class="overflow-hidden rounded-xl bg-white shadow-md">
+            <div class="scroll-zone scroll-3d-rotate overflow-hidden rounded-xl bg-white shadow-md">
               <button class="flex w-full items-center justify-between p-6 text-left">
                 <h3 class="text-ibwt-primary text-lg font-semibold">
                   {question}

@@ -11,7 +11,9 @@ const { isContactPage = false } = Astro.props
 <div
   class:list={[
     "rounded-lg p-8",
-    !isContactPage ? "slide-in-left bg-blue-50" : "border shadow-lg"
+    !isContactPage
+      ? "slide-in-left bg-blue-50"
+      : "scroll-fade-in-up border shadow-lg"
   ]}
 >
   {

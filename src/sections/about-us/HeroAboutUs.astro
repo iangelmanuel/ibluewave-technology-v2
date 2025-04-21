@@ -13,9 +13,9 @@ import Noise from "@components/home-page/NoiseEffect.astro"
   class="relative overflow-hidden bg-gradient-to-t from-blue-950 to-blue-700 px-5 py-16 text-white xl:px-0"
 >
   <article
-    class="container mx-auto flex flex-col-reverse items-center justify-around gap-y-5 xl:flex-row xl:gap-y-0"
+    class="container mx-auto flex flex-col-reverse items-center justify-around gap-y-5 lg:flex-row lg:gap-y-0"
   >
-    <div class="z-30 max-w-4xl">
+    <div class="z-30 container">
       <h1
         class="text-ibwt-secondary hero-title mb-6 text-4xl font-bold md:text-5xl lg:text-6xl"
       >
@@ -31,14 +31,14 @@ import Noise from "@components/home-page/NoiseEffect.astro"
       <div class="flex flex-wrap gap-4">
         <Link
           href="#nuestra-historia"
-          className="bg-ibwt-secondary hero-btn-primary w-full px-6 py-3 text-center font-medium text-white xl:w-auto xl:text-start"
+          className="bg-ibwt-secondary hero-btn-primary w-full px-6 py-3 text-center font-medium text-white lg:w-auto lg:text-start"
         >
           Nuestra Historia
         </Link>
 
         <LinkSecondary
           href="#nuestro-equipo"
-          className="hero-btn-secondary w-full px-6 py-3 text-center font-medium xl:w-auto xl:text-start"
+          className="hero-btn-secondary w-full px-6 py-3 text-center font-medium lg:w-auto lg:text-start"
           >Conoce a Nuestro Equipo</LinkSecondary
         >
       </div>
@@ -48,7 +48,7 @@ import Noise from "@components/home-page/NoiseEffect.astro"
       <Image
         src={Logo}
         alt="Logo de iBluewave Technology"
-        class="h-full w-60 object-cover object-bottom xl:w-full"
+        class="h-full w-60 object-cover object-bottom lg:w-full"
         width={500}
         height={500}
       />
