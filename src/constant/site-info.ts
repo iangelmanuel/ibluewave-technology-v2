@@ -6,5 +6,6 @@ export const siteInfo = {
   url: "https://ibluewavetechnology.com",
   address: "TV 44 #102-167",
   phone: "+57 300 802 9002",
-  email: "ibluwavetechnology@gmail.com"
+  email: "ibluwavetechnology@gmail.com",
+  city: "Barranquilla, Atlántico"
 }

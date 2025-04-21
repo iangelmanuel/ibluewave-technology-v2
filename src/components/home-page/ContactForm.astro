@@ -1,16 +1,46 @@
 ---
 import ButtonPrimary from "@components/utilities/ButtonPrimary.astro"
+
+interface Props {
+  isContactPage?: boolean
+}
+
+const { isContactPage = false } = Astro.props
 ---
 
-<div class="slide-in-left rounded-lg bg-blue-50 p-8">
-  <h3 class="text-ibwt-primary mb-6 text-xl font-bold">Envianos un mensaje</h3>
+<div
+  class:list={[
+    "rounded-lg p-8",
+    !isContactPage ? "slide-in-left bg-blue-50" : "border shadow-lg"
+  ]}
+>
+  {
+    !isContactPage ? (
+      <h3
+        text-gray-700
+        class="text-ibwt-primary mb-6 text-xl font-bold"
+      >
+        Envianos un mensaje
+      </h3>
+    ) : (
+      <>
+        <h2 class="text-ibwt-primary mb-6 text-3xl font-bold">
+          Envíanos un Mensaje
+        </h2>
+        <p class="mb-8 text-gray-700">
+          Completa el formulario a continuación y nos pondremos en contacto
+          contigo lo antes posible.
+        </p>
+      </>
+    )
+  }
 
   <form class="space-y-4">
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div class="space-y-2">
         <label
           for="name"
-          class="text-sm font-medium"
+          class="text-sm font-medium text-gray-700"
           >Nombre</label
         >
         <input
@@ -23,7 +53,7 @@ import ButtonPrimary from "@components/utilities/ButtonPrimary.astro"
       <div class="space-y-2">
         <label
           for="email"
-          class="text-sm font-medium"
+          class="text-sm font-medium text-gray-700"
           >Correo electrónico</label
         >
         <input
@@ -38,7 +68,7 @@ import ButtonPrimary from "@components/utilities/ButtonPrimary.astro"
     <div class="space-y-2">
       <label
         for="subject"
-        class="text-sm font-medium"
+        class="text-sm font-medium text-gray-700"
       >
         Asunto</label
       >
@@ -52,7 +82,7 @@ import ButtonPrimary from "@components/utilities/ButtonPrimary.astro"
     <div class="space-y-2">
       <label
         for="message"
-        class="text-sm font-medium"
+        class="text-sm font-medium text-gray-700"
         >Mensaje</label
       >
       <textarea

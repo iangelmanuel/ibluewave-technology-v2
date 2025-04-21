@@ -13,7 +13,7 @@ const { href, target, rel, className } = Astro.props
   href={href}
   target={target}
   rel={rel}
-  class:list={["button2", className]}
+  class:list={["button2 inline-block", className]}
 >
   <slot />
   <span></span>
@@ -21,7 +21,6 @@ const { href, target, rel, className } = Astro.props
 
 <style>
   .button2 {
-    display: inline-block;
     transition: all 0.2s ease-in;
     position: relative;
     overflow: hidden;

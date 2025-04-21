@@ -92,6 +92,48 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @keyframes wave-left {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30px);
+    }
+  }
+
+  @keyframes wave-right {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(30px);
+    }
+  }
+
+  @keyframes wave-center {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+  }
+
+  .animate-wave-left {
+    animation: wave-left 12s ease-in-out infinite;
+  }
+
+  .animate-wave-right {
+    animation: wave-right 12s ease-in-out infinite;
+  }
+
+  .animate-wave-center {
+    animation: wave-center 12s ease-in-out infinite;
+  }
 }
 
 @font-face {

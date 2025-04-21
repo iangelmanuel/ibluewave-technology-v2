@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components"
+
+const whyContactUs = [
+  {
+    icon: "basic-icons/phone",
+    title: "Soporte Técnico",
+    description:
+      "¿Tienes problemas con alguno de nuestros productos? Nuestro equipo de soporte técnico está listo para ayudarte.",
+    href: "#formulario",
+    text: "Chatea con nosotros"
+  },
+  {
+    icon: "basic-icons/book",
+    title: "Información de Cursos",
+    description:
+      "Descubre más sobre nuestros cursos de buceo, certificaciones disponibles y próximas fechas de inicio.",
+    href: "/cursos-especiales",
+    text: "Ver cursos"
+  },
+  {
+    icon: "basic-icons/shield",
+    title: "Colaboraciones y Alianzas",
+    description:
+      "¿Interesado en colaborar con nosotros? Contáctanos para discutir posibles alianzas y oportunidades de negocio.",
+    href: "#formulario",
+    text: "Chatea con nosotros"
+  }
+]
+---
+
+<section class="py-16">
+  <article class="container mx-auto px-5 xl:px-0">
+    <div class="mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="text-ibwt-primary mb-6 text-3xl font-bold">
+        ¿Por qué contactarnos?
+      </h2>
+      <p class="text-gray-700">
+        Estamos aquí para ayudarte con cualquier consulta relacionada con
+        nuestros servicios y productos
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        whyContactUs.map(({ icon, title, description, href, text }) => (
+          <div class="rounded-xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
+              <Icon
+                name={icon}
+                size={25}
+                class="text-ibwt-secondary"
+              />
+            </div>
+
+            <h3 class="text-ibwt-primary mb-3 text-xl font-bold">{title}</h3>
+            <p class="mb-4 text-gray-700">{description}</p>
+            <a
+              href={href}
+              class="text-ibwt-secondary inline-flex items-center font-medium hover:text-orange-400"
+            >
+              {text}
+              <Icon
+                name="basic-icons/right-arrow"
+                size={20}
+                class="ml-2"
+              />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </article>
+</section>

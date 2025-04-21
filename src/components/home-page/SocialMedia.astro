@@ -2,10 +2,22 @@
 import { Icon } from "astro-icon/components"
 
 import { socialMediaIcon } from "@constant/social-media"
+
+interface Props {
+  isContactPage?: boolean
+}
+
+const { isContactPage = false } = Astro.props
 ---
 
-<div class="mt-8">
-  <h4 class="mb-4 font-medium">Síguenos en nuestras redes sociales</h4>
+<div class:list={[isContactPage ? "" : "mt-8"]}>
+  {
+    !isContactPage && (
+      <h4 class="text-ibwt-primary mb-6 text-xl font-bold">
+        Información de contacto
+      </h4>
+    )
+  }
 
   <div class="flex space-x-4">
     {
@@ -14,11 +26,16 @@ import { socialMediaIcon } from "@constant/social-media"
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-ibwt-primary flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 transition-colors hover:bg-blue-200"
+          class:list={[
+            "flex h-10 w-10 items-center justify-center rounded-full transition-colors",
+            !isContactPage
+              ? "text-ibwt-primary bg-blue-100 hover:bg-blue-200"
+              : "text-ibwt-secondary bg-orange-100 hover:bg-orange-200"
+          ]}
         >
           <Icon
             name={name}
-            size="20"
+            size={20}
           />
         </a>
       ))

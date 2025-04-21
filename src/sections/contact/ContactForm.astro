@@ -1,0 +1,106 @@
+---
+import { Icon } from "astro-icon/components"
+import { siteInfo } from "@constant/site-info"
+import SocialMedia from "@components/home-page/SocialMedia.astro"
+import Form from "@components/home-page/ContactForm.astro"
+
+const contactInfo = [
+  {
+    icon: "basic-icons/pin",
+    title: "Dirección",
+    information: siteInfo.address
+  },
+  {
+    icon: "basic-icons/phone",
+    title: "Teléfono",
+    information: siteInfo.phone
+  },
+  {
+    icon: "basic-icons/email",
+    title: "Correo Electrónico",
+    information: siteInfo.email
+  },
+  {
+    icon: "basic-icons/clock",
+    title: "Horario de Atención",
+    information:
+      "Lunes - Viernes: 9:00 AM - 6:00 PM\nSábados: 10:00 AM - 2:00 PM\nDomingos: Cerrado"
+  }
+]
+
+const hasSpace = (text: string) => {
+  return text.split("\n").length > 1
+}
+
+const isWithSpace = (text: string) => {
+  return text.split("\n")
+}
+---
+
+<section
+  id="formulario"
+  class="py-16"
+>
+  <article class="container mx-auto px-5 xl:px-0">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="text-ibwt-primary mb-8 text-3xl font-bold">
+          Información de Contacto
+        </h2>
+
+        <div class="space-y-8">
+          {
+            contactInfo.map(({ icon, title, information }) => (
+              <div class="flex items-start">
+                <div class="bg-ibwt-secondary/10 mr-4 rounded-full p-3">
+                  <Icon
+                    name={icon}
+                    size={25}
+                    class="text-ibwt-secondary"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-ibwt-primary mb-1 text-lg font-semibold">
+                    {title}
+                  </h3>
+
+                  {title === "Correo Electrónico" ? (
+                    <a
+                      href={`mailto:${information}`}
+                      class="hover:text-ibwt-primary text-gray-700 hover:underline"
+                    >
+                      {information}
+                    </a>
+                  ) : title === "Teléfono" ? (
+                    <a
+                      href={`tel:${information}`}
+                      class="hover:text-ibwt-primary text-gray-700 hover:underline"
+                    >
+                      {information}
+                    </a>
+                  ) : hasSpace(information) ? (
+                    isWithSpace(information).map((line) => (
+                      <p class="text-gray-700">{line}</p>
+                    ))
+                  ) : (
+                    <p class="text-gray-700">{information}</p>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-10">
+          <h3 class="text-ibwt-primary mb-4 text-lg font-semibold">
+            Síguenos en Redes Sociales
+          </h3>
+
+          <SocialMedia isContactPage />
+        </div>
+      </div>
+
+      <Form isContactPage />
+    </div>
+  </article>
+</section>

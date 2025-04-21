@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components"
+
+const QAAs = [
+  {
+    question: "¿Con qué certificadora está vinculado iBlueWaveTechnology?",
+    answer:
+      "Estamos vinculados con NAUI (National Association of Underwater Instructors), una reconocida organización internacional que certifica buceadores. Ricardo de la Torre, fundador de la empresa, es instructor en formación bajo esta entidad y fue distinguido con la beca de diversidad NAUI."
+  },
+  {
+    question: "¿Qué tipos de buceo enseña iBlueWaveTechnology?",
+    answer:
+      "Ofrecemos formación en buceo scuba y freediving. Nuestro enfoque educativo combina la enseñanza de técnicas seguras con una fuerte conciencia ambiental, preparando a los estudiantes para certificarse con estándares internacionales."
+  },
+  {
+    question: "¿Qué diferencia a sus cursos de buceo respecto a otros?",
+    answer:
+      "Nuestros cursos están diseñados no solo para desarrollar habilidades técnicas, sino también para fomentar un compromiso profundo con la conservación marina. Cada formación incluye un enfoque sostenible y educativo que destaca la importancia de proteger los ecosistemas submarinos."
+  },
+  {
+    question: "¿Qué tipo de productos desarrollan para el buceo?",
+    answer:
+      "iBlueWaveTechnology desarrolla boyas y maletines diseñados específicamente para complementar la práctica del buceo y actividades subacuáticas. Estos productos se crean con criterios de funcionalidad, seguridad e innovación."
+  },
+  {
+    question: "¿Cuál es el enfoque educativo de iBlueWaveTechnology?",
+    answer:
+      "Nos centramos en la educación ambiental a través del buceo, promoviendo prácticas responsables y sostenibles. Nuestra meta es formar buceadores hábiles que también actúen como defensores del medio ambiente marino."
+  },
+  {
+    question: "¿Qué papel juega Ricardo de la Torre en la empresa?",
+    answer:
+      "Ricardo es el fundador de iBlueWaveTechnology y un apneista con una fuerte vocación educativa. Su experiencia como instructor en formación NAUI le ha permitido diseñar cursos que integran habilidades técnicas con conciencia ambiental."
+  }
+]
+---
+
+<section class="bg-blue-50 py-16">
+  <article class="container mx-auto px-5 xl:px-0">
+    <div class="mx-auto mb-16 max-w-3xl text-center">
+      <h2 class="text-ibwt-primary mb-6 text-3xl font-bold">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-gray-700">
+        Respuestas a las preguntas más comunes sobre nuestros servicios y
+        productos
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-4xl">
+      <div class="space-y-6">
+        {
+          QAAs.map(({ question, answer }) => (
+            <div class="overflow-hidden rounded-xl bg-white shadow-md">
+              <button class="flex w-full items-center justify-between p-6 text-left">
+                <h3 class="text-ibwt-primary text-lg font-semibold">
+                  {question}
+                </h3>
+                <Icon
+                  name="basic-icons/chevron-down"
+                  size={20}
+                  class="text-gray-700"
+                />
+              </button>
+              <div class="px-6 pb-6">
+                <p class="text-gray-700">{answer}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </article>
+</section>
