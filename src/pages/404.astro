@@ -1,0 +1,648 @@
+---
+import Layout from "@layouts/Layout.astro"
+import Link from "@components/utilities/Link.astro"
+import LinkSecondary from "@components/utilities/LinkSecondary.astro"
+
+import NoiseEffect from "@components/home-page/NoiseEffect.astro"
+import BubblesEffect from "@components/home-page/BubblesEffect.astro"
+import { Icon } from "astro-icon/components"
+---
+
+<Layout
+  title="404 - Página no encontrada"
+  description="Lo sentimos, la página que buscas no existe o ha sido movida."
+>
+  <section
+    class="relative min-h-[80vh] overflow-hidden bg-gradient-to-b from-blue-500 via-blue-700 to-blue-950"
+  >
+    <NoiseEffect />
+    <BubblesEffect />
+
+    <div class="animate-sway absolute bottom-0 left-[5%] h-64 w-20">
+      <svg
+        viewBox="0 0 100 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M50,400 C30,350 70,300 40,250 C20,200 60,150 40,100 C30,50 60,0 50,0"
+          stroke="#047857"
+          stroke-width="12"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M30,400 C10,340 40,280 20,220 C0,160 30,100 10,40"
+          stroke="#065f46"
+          stroke-width="8"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M70,400 C90,350 60,300 80,250 C100,200 70,150 90,100"
+          stroke="#059669"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </div>
+
+    <div
+      class="animate-sway absolute bottom-0 left-[15%] h-80 w-24"
+      style="animation-delay: -1s;"
+    >
+      <svg
+        viewBox="0 0 100 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M50,400 C70,350 30,300 60,250 C80,200 40,150 60,100 C70,50 40,0 50,0"
+          stroke="#047857"
+          stroke-width="12"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M70,400 C90,340 60,280 80,220 C100,160 70,100 90,40"
+          stroke="#065f46"
+          stroke-width="8"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M30,400 C10,350 40,300 20,250 C0,200 30,150 10,100"
+          stroke="#059669"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </div>
+
+    <div
+      class="animate-sway absolute right-[5%] bottom-0 h-64 w-20"
+      style="animation-delay: -0.5s;"
+    >
+      <svg
+        viewBox="0 0 100 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M50,400 C30,350 70,300 40,250 C20,200 60,150 40,100 C30,50 60,0 50,0"
+          stroke="#047857"
+          stroke-width="12"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M30,400 C10,340 40,280 20,220 C0,160 30,100 10,40"
+          stroke="#065f46"
+          stroke-width="8"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M70,400 C90,350 60,300 80,250 C100,200 70,150 90,100"
+          stroke="#059669"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </div>
+
+    <div
+      class="animate-sway absolute right-[15%] bottom-0 h-80 w-24"
+      style="animation-delay: -1.5s;"
+    >
+      <svg
+        viewBox="0 0 100 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M50,400 C70,350 30,300 60,250 C80,200 40,150 60,100 C70,50 40,0 50,0"
+          stroke="#047857"
+          stroke-width="12"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M70,400 C90,340 60,280 80,220 C100,160 70,100 90,40"
+          stroke="#065f46"
+          stroke-width="8"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M30,400 C10,350 40,300 20,250 C0,200 30,150 10,100"
+          stroke="#059669"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="absolute -bottom-5 left-[8%] h-32 w-32">
+      <svg
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M100,0 C120,40 150,30 160,60 C170,90 150,120 170,150 C190,180 150,200 100,200 C50,200 10,180 30,150 C50,120 30,90 40,60 C50,30 80,40 100,0"
+          fill="#f97316"
+          opacity="0.8"
+        ></path>
+        <path
+          d="M100,20 C115,50 135,45 142,65 C150,85 135,105 150,130 C165,155 135,170 100,170 C65,170 35,155 50,130 C65,105 50,85 58,65 C65,45 85,50 100,20"
+          fill="#fb923c"
+          opacity="0.6"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="absolute right-[8%] -bottom-5 h-32 w-32">
+      <svg
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M100,0 C130,30 120,60 150,90 C180,120 150,150 180,180 C150,200 100,190 50,180 C20,150 50,120 20,90 C50,60 40,30 70,0 Z"
+          fill="#0ea5e9"
+          opacity="0.8"
+        ></path>
+        <path
+          d="M100,20 C120,40 115,60 135,80 C155,100 135,120 155,140 C135,155 100,150 65,140 C45,120 65,100 45,80 C65,60 60,40 80,20 Z"
+          fill="#38bdf8"
+          opacity="0.6"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="animate-float-slow absolute top-1/4 left-0 h-16 w-24">
+      <svg
+        viewBox="0 0 200 100"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M40,50 C60,30 100,20 150,50 C100,80 60,70 40,50 Z"
+          fill="#f97316"
+          stroke="#c2410c"
+          stroke-width="2"
+        ></path>
+        <path
+          d="M150,50 L180,30 L180,70 Z"
+          fill="#f97316"
+          stroke="#c2410c"
+          stroke-width="2"
+        ></path>
+        <circle
+          cx="50"
+          cy="45"
+          r="5"
+          fill="#000000"
+        ></circle>
+        <path
+          d="M70,40 C80,45 80,55 70,60"
+          fill="none"
+          stroke="#c2410c"
+          stroke-width="2"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="animate-float absolute top-1/3 right-0 h-12 w-20">
+      <svg
+        viewBox="0 0 200 100"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M160,50 C140,30 100,20 50,50 C100,80 140,70 160,50 Z"
+          fill="#0ea5e9"
+          stroke="#0369a1"
+          stroke-width="2"
+        ></path>
+        <path
+          d="M50,50 L20,30 L20,70 Z"
+          fill="#0ea5e9"
+          stroke="#0369a1"
+          stroke-width="2"
+        ></path>
+        <circle
+          cx="150"
+          cy="45"
+          r="5"
+          fill="#000000"
+        ></circle>
+        <path
+          d="M130,40 C120,45 120,55 130,60"
+          fill="none"
+          stroke="#0369a1"
+          stroke-width="2"
+        ></path>
+      </svg>
+    </div>
+
+    <div
+      class="animate-float-slow absolute top-2/3 left-1/4 h-10 w-16"
+      style="animation-delay: -2s;"
+    >
+      <svg
+        viewBox="0 0 200 100"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full"
+      >
+        <path
+          d="M40,50 C60,30 100,20 150,50 C100,80 60,70 40,50 Z"
+          fill="#eab308"
+          stroke="#ca8a04"
+          stroke-width="2"
+        ></path>
+        <path
+          d="M150,50 L180,30 L180,70 Z"
+          fill="#eab308"
+          stroke="#ca8a04"
+          stroke-width="2"
+        ></path>
+        <circle
+          cx="50"
+          cy="45"
+          r="5"
+          fill="#000000"
+        ></circle>
+        <path
+          d="M70,40 C80,45 80,55 70,60"
+          fill="none"
+          stroke="#ca8a04"
+          stroke-width="2"
+        ></path>
+      </svg>
+    </div>
+
+    <div
+      class="relative z-10 container mx-auto flex h-full flex-col items-center justify-center px-4 py-20"
+    >
+      <div class="text-center">
+        <div class="relative mb-8">
+          <h1 class="text-[150px] leading-none font-bold md:text-[200px]">
+            <span class="text-ibwt-primary">4</span>
+            <span class="text-ibwt-secondary">0</span>
+            <span class="text-ibwt-primary">4</span>
+          </h1>
+
+          <div
+            class="animate-float absolute top-1/2 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform"
+          >
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-full w-full"
+            >
+              <rect
+                x="85"
+                y="70"
+                width="30"
+                height="60"
+                rx="5"
+                fill="#64748b"
+                stroke="#475569"
+                stroke-width="2"
+              ></rect>
+              <rect
+                x="90"
+                y="65"
+                width="20"
+                height="10"
+                rx="2"
+                fill="#475569"
+              ></rect>
+
+              <ellipse
+                cx="100"
+                cy="100"
+                rx="40"
+                ry="45"
+                fill="#0ea5e9"
+                stroke="#0284c7"
+                stroke-width="2"
+              ></ellipse>
+
+              <ellipse
+                cx="100"
+                cy="80"
+                rx="25"
+                ry="20"
+                fill="#bae6fd"
+                stroke="#0284c7"
+                stroke-width="2"
+              ></ellipse>
+              <ellipse
+                cx="100"
+                cy="80"
+                rx="20"
+                ry="15"
+                fill="#eff6ff"
+                opacity="0.6"
+              ></ellipse>
+
+              <circle
+                cx="100"
+                cy="80"
+                r="22"
+                fill="none"
+                stroke="#0284c7"
+                stroke-width="3"
+                stroke-dasharray="2 4"
+              ></circle>
+
+              <path
+                d="M75,85 C65,90 60,100 65,110"
+                fill="none"
+                stroke="#475569"
+                stroke-width="3"
+              ></path>
+              <path
+                d="M125,85 C135,90 140,100 135,110"
+                fill="none"
+                stroke="#475569"
+                stroke-width="3"
+              ></path>
+
+              <path
+                d="M65,100 C55,110 50,130 60,140"
+                fill="none"
+                stroke="#0284c7"
+                stroke-width="8"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M135,100 C145,110 150,130 140,140"
+                fill="none"
+                stroke="#0284c7"
+                stroke-width="8"
+                stroke-linecap="round"
+              ></path>
+
+              <path
+                d="M85,140 C80,150 75,170 85,180"
+                fill="none"
+                stroke="#0284c7"
+                stroke-width="10"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M115,140 C120,150 125,170 115,180"
+                fill="none"
+                stroke="#0284c7"
+                stroke-width="10"
+                stroke-linecap="round"
+              ></path>
+
+              <path
+                d="M85,180 C75,185 65,185 60,175"
+                fill="#0369a1"
+                stroke="#0284c7"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M115,180 C125,185 135,185 140,175"
+                fill="#0369a1"
+                stroke="#0284c7"
+                stroke-width="2"
+              ></path>
+
+              <circle
+                cx="125"
+                cy="70"
+                r="3"
+                fill="#f8fafc"
+                opacity="0.8"
+              ></circle>
+              <circle
+                cx="130"
+                cy="60"
+                r="4"
+                fill="#f8fafc"
+                opacity="0.8"
+              ></circle>
+              <circle
+                cx="125"
+                cy="50"
+                r="5"
+                fill="#f8fafc"
+                opacity="0.8"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+
+        <h2 class="mb-6 text-3xl font-bold text-gray-100 md:text-4xl">
+          ¡Te has sumergido demasiado profundo!
+        </h2>
+        <p class="mx-auto mb-10 max-w-2xl text-xl text-gray-300">
+          Parece que has llegado a una zona inexplorada del océano digital. Esta
+          página no existe o ha sido movida a aguas más superficiales.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <Link
+            href="/"
+            className="group bg-ibwt-secondary relative overflow-hidden px-8 py-3 font-medium text-white"
+          >
+            <span class="relative z-10 flex items-center">
+              <Icon
+                name="basic-icons/chevron-left"
+                size={23}
+                class="mr-2"
+              />
+              Volver a la superficie
+            </span>
+          </Link>
+
+          <LinkSecondary
+            href="/contacto"
+            className="group relative overflow-hidden px-8 py-3 font-medium text-white"
+          >
+            <span class="relative z-10 flex items-center">
+              <Icon
+                name="basic-icons/phone"
+                size={23}
+                class="mr-2"
+              />
+              Contactar con un guía
+            </span>
+          </LinkSecondary>
+        </div>
+
+        <div class="absolute top-10 right-3 hidden md:block">
+          <div
+            class="relative h-40 w-40 rounded-full bg-gradient-to-br from-sky-100 to-blue-200 shadow-xl"
+          >
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="relative h-full w-full">
+                <div
+                  class="gauge-mark"
+                  style="--i: 0"
+                >
+                  <span>0</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 1"
+                >
+                  <span>100</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 2"
+                >
+                  <span>200</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 3"
+                >
+                  <span>300</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 4"
+                >
+                  <span>400</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 5"
+                >
+                  <span>500</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 6"
+                >
+                  <span>600</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 7"
+                >
+                  <span>700</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 8"
+                >
+                  <span>800</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 9"
+                >
+                  <span>900</span>
+                </div>
+                <div
+                  class="gauge-mark"
+                  style="--i: 10"
+                >
+                  <span>1000</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute bottom-1/2 left-1/2 z-30 h-[40%] w-[3px] origin-bottom bg-red-500"
+              style="transform: translateX(-50%) rotate(145.44deg);"
+            >
+            </div>
+
+            <div
+              class="absolute top-1/2 left-1/2 z-40 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-slate-800 shadow-md"
+            >
+            </div>
+
+            <div
+              class="absolute top-10 left-1/2 z-50 -translate-x-1/2 transform text-center"
+            >
+              <div class="text-ibwt-primary text-xs font-semibold">
+                PROFUNDIDAD
+              </div>
+              <div class="text-ibwt-primary text-2xl font-bold tracking-wider">
+                404m
+              </div>
+              <div class="mt-1 text-sm font-semibold text-red-600">
+                ZONA PELIGROSA
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes sway {
+      0%,
+      100% {
+        transform: rotate(-8deg) scaleY(1.02);
+      }
+      50% {
+        transform: rotate(8deg) scaleY(0.98);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-slow {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .animate-sway {
+      animation: sway 6s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+    .gauge-mark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 10px;
+      background-color: #334155;
+      transform: rotate(calc(var(--i) * 36deg)) translateY(-80px);
+      transform-origin: center;
+    }
+
+    .gauge-mark span {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%) rotate(calc(var(--i) * -36deg));
+      font-size: 0.65rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .clip-needle {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  </style>
+</Layout>
