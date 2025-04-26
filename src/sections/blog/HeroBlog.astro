@@ -1,0 +1,69 @@
+---
+import NoiseEffect from "@components/home-page/NoiseEffect.astro"
+import BubbleEffect from "@components/home-page/BubblesEffect.astro"
+---
+
+<section
+  class="relative overflow-hidden bg-gradient-to-b from-blue-700 to-blue-950 py-16 text-white"
+>
+  <NoiseEffect />
+  <BubbleEffect />
+
+  <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute top-[20%] left-[10%] h-8 w-8 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 6s;"
+    >
+    </div>
+
+    <div
+      class="absolute top-[40%] left-[25%] h-12 w-12 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 8s;"
+    >
+    </div>
+
+    <div
+      class="absolute top-[60%] left-[40%] h-6 w-6 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 7s;"
+    >
+    </div>
+
+    <div
+      class="absolute top-[30%] left-[60%] h-10 w-10 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 9s;"
+    >
+    </div>
+
+    <div
+      class="absolute top-[50%] left-[75%] h-16 w-16 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 10s;"
+    >
+    </div>
+
+    <div
+      class="absolute top-[70%] left-[90%] h-8 w-8 animate-bounce rounded-full bg-white/10 backdrop-blur-sm"
+      style="animation-duration: 7s;"
+    >
+    </div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="mx-auto max-w-4xl text-center">
+      <div
+        class="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+      >
+        <div class="bg-ibwt-secondary h-2 w-2 animate-pulse rounded-full"></div>
+        <span class="text-sm text-white/90">Conocimiento Submarino</span>
+      </div>
+
+      <h1 class="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+        <span class="block">Blog de</span>
+        <span class="text-ibwt-secondary">iBluewave Technology</span>
+      </h1>
+      <p class="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
+        Explorando las profundidades del conocimiento sobre tecnología
+        submarina, buceo y comunicación bajo el agua.
+      </p>
+    </div>
+  </div>
+</section>

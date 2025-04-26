@@ -1,10 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro"
+import HeroBlog from "@sections/blog/HeroBlog.astro"
+import FeaturedArticle from "@sections/blog/FeaturedArticle.astro"
+import Blogs from "@sections/blog/Blogs.astro"
 ---
 
 <Layout
   title="iBluewave - Blog"
   description="Blog de iBluewave, descubre nuestros artículos y novedades"
 >
-  <h1>Blog</h1>
+  <HeroBlog />
+  <FeaturedArticle />
+  <Blogs />
 </Layout>

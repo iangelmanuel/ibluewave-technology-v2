@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components"
 
 const misionVision = [
   {
+    icon: "basic-icons/annotation",
     title: "Nuestra Misión",
     description:
       "Nuestra misión es ir más allá de lo técnico para convertir cada experiencia marina en una forma de conexión consciente con la naturaleza. Aspiramos a fortalecer el vínculo entre las personas y el océano, desde la responsabilidad y el respeto.",
@@ -14,6 +15,7 @@ const misionVision = [
     ]
   },
   {
+    icon: "basic-icons/eye",
     title: "Nuestra Visión",
     description:
       "Nuestra visión es consolidarnos como un referente en innovación y conciencia ambiental dentro del mundo submarino, promoviendo una relación armónica entre las personas y los ecosistemas marinos.",
@@ -42,7 +44,7 @@ const misionVision = [
 
     <div class="scroll-zone grid gap-12 overflow-x-hidden md:grid-cols-2">
       {
-        misionVision.map(({ title, description, color, objectives }) => (
+        misionVision.map(({ icon, title, description, color, objectives }) => (
           <div
             class:list={[
               "relative overflow-hidden rounded-lg bg-white p-8 shadow-lg",
@@ -63,8 +65,8 @@ const misionVision = [
                 ]}
               >
                 <Icon
-                  name="basic-icons/check"
-                  size={60}
+                  name={icon}
+                  size={50}
                 />
               </div>
               <h3 class="text-ibwt-primary mb-4 text-2xl font-bold">{title}</h3>
